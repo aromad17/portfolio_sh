@@ -66,6 +66,12 @@
     font-size: 4rem;
   }
 
+  .section_title:before {
+    width: 80px;
+    height: 80px;
+    right: -40px;
+  }
+
   .section_title>ul {
     display: none;
   }
