@@ -1,0 +1,76 @@
+@keyframes from0to360 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes from360to0 {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes from360to0scaled {
+  from {
+    transform: rotate(360deg) scale(2);
+  }
+
+  to {
+    transform: rotate(0deg) scale(-0.25);
+  }
+}
+
+#starry {
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border: solid thin #242226;
+  padding: 20px;
+  min-width: 500px;
+  min-height: 500px;
+
+  ellipse {
+    cx: 250; // position elements in the center
+    cy: 250; // position elements in the center
+    transform-origin: center; // rotate animation origin
+  }
+}
+
+
+#line {
+  x1: 250px;
+  y1: 500px;
+  x2: 250;
+  y2: 0;
+  stroke: white;
+  stroke-width: 10;
+}
+
+#el1 {
+  animation: from0to360 20s linear infinite;
+  fill: #E6E9DE ;
+}
+
+#el2 {
+  animation: from360to0 20s linear infinite;
+  fill: #E6E9DE ;
+}
+
+#el3 {
+  animation: from0to360 20s linear infinite;
+  fill: #E6E9DE ;
+}
+
+#el4 {
+  animation: from360to0 20s linear infinite;
+  fill: #E6E9DE ;
+}
