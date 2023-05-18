@@ -22,6 +22,7 @@ function Content() {
       console.log(scrollHeight);
     });
 
+
     const header = document.querySelector('header');
     const ulElement = document.querySelector('.content header ul');
     const liElement = document.querySelector('.content header ul li');
@@ -106,14 +107,19 @@ function Content() {
   }, []);
 
 
-
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    let vw = window.innerWidth * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty("--vw", `${vw}px`);
+  }
   useEffect(() => {
     const header = document.querySelector('header');
     const sideMenu = document.querySelector('.Menu');
     const ham = document.querySelector('.ham');
 
     animatedHeader();
-
+    setScreenSize();
     setTimeout(() => {
       header.style.height = 100 + 'px';
     }, 2000);
@@ -153,7 +159,7 @@ function Content() {
     });
 
     const height = [0, 969, 2810, 3795]
-    const liCon = document.querySelectorAll(".content ul li");
+    const liCon = document.querySelectorAll(".content>header>ul>li");
     let num = 0;
     let beforeCalc;
 
@@ -163,7 +169,9 @@ function Content() {
         const result = idx % 3 + 1;
 
         window.scroll({
-          top: height[result]
+          top: height[result],
+          behavior: 'smooth'
+
         })
       })
     })

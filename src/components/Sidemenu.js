@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import 'styles/sidemenu.scss';
 import $ from 'jquery';
+import 'styles/sidemenu.scss';
+
 
 function Sidemenu({ isHamOn, setIsHamOn }) {
 
@@ -58,7 +59,6 @@ function Sidemenu({ isHamOn, setIsHamOn }) {
     })
   }, [])
 
-  // 2810
 
   return (
     <div className={`Menu ${isHamOn ? 'on' : ''}`}>

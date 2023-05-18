@@ -154,7 +154,7 @@ function Work() {
             </div>
             <div className='work_description'>
               <div className='description_space'>
-                <h3>CJ ONE</h3>
+                <h3>CJ ONE<span>반응형</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -213,7 +213,8 @@ function Work() {
             </div>
             <div className='work_description'>
               <div className='description_space'>
-                <h3>삼성 전기</h3>
+                <h3>삼성 전기<span>PC</span></h3>
+
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -285,7 +286,7 @@ function Work() {
 
             <div className='work_description'>
               <div className='description_space'>
-                <h3>삼성 엔지니어링</h3>
+                <h3>삼성 엔지니어링<span>반응형</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -356,7 +357,7 @@ function Work() {
 
             <div className='work_description'>
               <div className='description_space'>
-                <h3>메신저 앱</h3>
+                <h3>메신저 앱<span>반응형</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -420,7 +421,7 @@ function Work() {
             </div>
             <div className='work_description'>
               <div className='description_space'>
-                <h3>넷플릭스</h3>
+                <h3>넷플릭스<span>반응형</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>

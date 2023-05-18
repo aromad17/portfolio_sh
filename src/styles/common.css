@@ -5,7 +5,6 @@
   flex-direction: row;
   width: 100%;
   height: calc(100% - 250px);
-  overflow: hidden;
 }
 
 .section_title {

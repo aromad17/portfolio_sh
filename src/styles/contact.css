@@ -1,7 +1,7 @@
 .contact {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: #242226;
 }
 
@@ -51,18 +51,18 @@
   margin-right: 20px;
 }
 
-.touch {
+.contact .touch {
   width: 100%;
   height: 40%;
   overflow: hidden;
 }
 
-.touch>div {
+.contact .touch>div {
   width: 100%;
   overflow: hidden;
 }
 
-.touch>div>ul {
+.contact .touch>div>ul {
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -72,20 +72,20 @@
   transition: transform 1s linear 0.8s, opacity 1s linear 1.3s;
 }
 
-.touch>div>ul>li {
+.contact .touch>div>ul>li {
   margin-right: 10%;
 }
 
-.touch>div>ul>li>dl>dt {
+.contact .touch>div>ul>li>dl>dt {
   margin-bottom: 20px;
   font-size: 2.5rem;
 }
 
-.touch>div>ul>li>dl>dd {
+.contact .touch>div>ul>li>dl>dd {
   font-size: 2rem;
 }
 
-.touch>div>ul>li>dl>dd>a {
+.contact .touch>div>ul>li>dl>dd>a {
   color: #e6e9de;
 }
 
@@ -190,12 +190,12 @@
     height: 2.5rem;
   }
 
-  .touch>ul>li>dl>dt {
+  .contact .touch>ul>li>dl>dt {
     margin-bottom: 20px;
     font-size: 2rem;
   }
 
-  .touch>ul>li>dl>dd {
+  .contact .touch>ul>li>dl>dd {
     font-size: 1.5rem;
   }
 }
@@ -215,7 +215,7 @@
     font-size: 2rem;
   }
 
-  .touch {
+  .contact .touch {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,23 +224,23 @@
     height: 100%;
   }
 
-  .touch>ul {
+  .contact .touch>ul {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .touch>ul>li {
+  .contact .touch>ul>li {
     margin-right: 0;
     margin-bottom: 30px;
   }
 
 
-  .touch>ul>li>dl>dt {
+  .contact .touch>ul>li>dl>dt {
     margin-bottom: 20px;
     font-size: 1.75rem;
   }
 
-  .touch>ul>li>dl>dd {
+  .contact .touch>ul>li>dl>dd {
     font-size: 1.25rem;
   }
 

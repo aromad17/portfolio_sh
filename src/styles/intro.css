@@ -3,8 +3,8 @@
 .intro {
   position: relative;
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .intro>.intro_left {

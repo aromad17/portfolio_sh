@@ -4,7 +4,7 @@ import { FaUserAlt, FaPhone, FaHistory } from "react-icons/fa";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper';
+import { A11y, Navigation, Pagination } from 'swiper';
 
 function About() {
 
@@ -32,17 +32,18 @@ function About() {
     about.style.transition = 'all 0.5s'; // 0.5초 동안 변화
     aboutMove.style.transition = 'all 0.5s linear 0s, opacity 1s linear 0s';
 
+    const aboutWid = aboutMove.offsetWidth;
+    if (aboutWid > 845) {
+      about.style.height = (aboutWid - 2000) + 'px';
+    }
 
 
     window.addEventListener('scroll', () => {
       let scrollPosition = window.scrollY || window.pageYOffset;
-      const computedStyle = window.getComputedStyle(aboutMove);
-      const aboutWid = aboutMove.offsetWidth;
-      about.style.height = (aboutWid - 2000) + 'px';
-      let windowH = window.innerHeight;
-      let leftPercentage = -((scrollPosition - windowH) / 10) + '%';
 
       if (window.innerWidth > 846) {
+        let windowH = window.innerHeight;
+        let leftPercentage = -((scrollPosition - windowH) / 10) + '%';
         if (scrollPosition > 900) {
           if (scrollPosition <= windowH) {
             about.style.position = 'relative';
@@ -61,8 +62,9 @@ function About() {
             aboutMove.style.transform = 'translateX(' + leftPercentage + ')';
             aboutMove.style.opacity = '1';
             if (Number(leftPercentage.replace('%', '')) < -60) {
-              about.style.position = 'relative';
+              about.style.position = 'sticky';
               about.style.top = "0";
+              about.style.zIndex = 0;
               aboutMove.style.transform = 'translateX(-60%)';
               aboutMove.style.opacity = '1';
             }
@@ -91,8 +93,6 @@ function About() {
           sectionT.style.position = 'absolute';
           sectionT.style.top = 20 + 'px';
           aboutMove.style.position = 'abosolute';
-          aboutMove.style.top = '120px';
-          aboutMove.style.transform = 'translateX(0)';
           aboutMove.style.opacity = '1';
         }
 
@@ -165,7 +165,7 @@ function About() {
 
               <div className='about_skills_top_right'>
                 <Swiper
-                  modules={[Navigation, Pagination]}
+                  modules={[Navigation, Pagination, A11y]}
                   slidesPerView={1}
                   pagination={{ clickable: true }}
                 >

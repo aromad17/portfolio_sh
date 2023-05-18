@@ -1,9 +1,9 @@
 .about {
   position: relative;
   width: 200vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: #242226;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .about_me_wrap,
@@ -14,7 +14,7 @@
 }
 
 .about .contents {
-  height: calc(100vh - 250px);
+  height: calc(calc(var(--vh, 1vh) * 100) - 250px);
   opacity: 0;
 }
 
@@ -149,10 +149,14 @@
 }
 
 .swiper-slide:nth-of-type(1) {
-  display: none;
+  display: none !important;
 }
 
 .swiper-slide:nth-of-type(2)>.about_skills_icon {
+  display: none;
+}
+
+.swiper-pagination-bullet {
   display: none;
 }
 
@@ -311,7 +315,11 @@
   }
 
   .about .contents {
-    height: calc(100vh - 150px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: calc(calc(var(--vh, 1vh) * 100)- 150px);
+
   }
 
   .about_skills_wrap {
@@ -336,7 +344,7 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     border-top: 20px solid #E6E9DE;
     border-right: 3px solid #E6E9DE;
     border-bottom: 3px solid #E6E9DE;
@@ -380,6 +388,10 @@
     height: auto;
   }
 
+  .swiper-slide:nth-of-type(1) {
+    display: block !important;
+  }
+
   .swiper-slide:nth-of-type(2) {
     display: flex !important;
     flex-direction: column;
@@ -390,16 +402,20 @@
     flex-direction: column;
   }
 
+  .swiper-pagination {
+    top: unset !important;
+    bottom: 0px !important;
+  }
+
   .swiper-pagination-bullet {
-    width: 10px !important;
-    height: 10px !important;
-    margin: 0 8px !important;
     background: #E6E9DE !important;
   }
 
   .swiper-pagination-bullet-active {
     background: #ff7f50 !important;
   }
+
+
 
   .about_me_top,
   .about_me_bottom {
@@ -412,7 +428,7 @@
   }
 
   .about_me_top {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
   }
 
   .about_me_text {
@@ -481,7 +497,7 @@
   }
 
   ul.about_skills_icon>li>.skill_status {
-    width: 70px;
+    width: 100%;
     height: 10px;
   }
 
@@ -490,6 +506,9 @@
 }
 
 @media screen and (max-width:600px) {
+  .about .contents {
+    top: 55%;
+  }
 
   .about_skills_top {
     justify-content: space-between;
