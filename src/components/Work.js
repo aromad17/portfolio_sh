@@ -125,10 +125,6 @@ function Work() {
           <div className='work_content cj'>
             <div className='work_preview'>
               <div className='mockup'>
-                <ul>
-                  <li>개인 작업물</li>
-                  <li> 웹 접근성 검사 결과 보기</li>
-                </ul>
                 <div className='pc_mockup'>
                   <div className='pc_screen'>
                     <video src={process.env.PUBLIC_URL + '/images/cjone_vid.webm'}
@@ -145,16 +141,21 @@ function Work() {
                 </div>
                 <div className='phone_mockup'>
                   <div className='phone_screen'>
+                    <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                     <video src={process.env.PUBLIC_URL + '/images/cjone_vid_mo.webm'}
                       title="cjone video mo" muted={true} autoPlay={true} loop={true} type="video/webm" >
                     </video>
                   </div>
                 </div>
               </div>
+              <ul>
+                <li>개인 작업물</li>
+                <li> 웹 접근성 검사 결과 보기</li>
+              </ul>
             </div>
             <div className='work_description'>
               <div className='description_space'>
-                <h3>CJ ONE<span>반응형</span></h3>
+                <h3>CJ ONE<span>Responsive</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -198,10 +199,6 @@ function Work() {
           <div className='work_content samsung_electric'>
             <div className='work_preview'>
               <div className='mockup'>
-                <ul>
-                  <li>개인 작업물</li>
-                  <li> 웹 접근성 검사 결과 보기</li>
-                </ul>
                 <div className='pc_mockup'>
                   <div className='pc_screen'>
                     <video src={process.env.PUBLIC_URL + '/images/sselectric.webm'}
@@ -210,6 +207,10 @@ function Work() {
                   </div>
                 </div>
               </div>
+              <ul>
+                <li>개인 작업물</li>
+                <li> 웹 접근성 검사 결과 보기</li>
+              </ul>
             </div>
             <div className='work_description'>
               <div className='description_space'>
@@ -256,10 +257,6 @@ function Work() {
           <div className='work_content samsung_engineering'>
             <div className='work_preview'>
               <div className='mockup'>
-                <ul>
-                  <li>개인 작업물</li>
-                  <li> 웹 접근성 검사 결과 보기</li>
-                </ul>
                 <div className='pc_mockup'>
                   <div className='pc_screen'>
                     <video src={process.env.PUBLIC_URL + '/images/ssengineering.webm'}
@@ -276,17 +273,22 @@ function Work() {
                 </div>
                 <div className='phone_mockup'>
                   <div className='phone_screen'>
+                    <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                     <video src={process.env.PUBLIC_URL + '/images/cjone_vid_mo.webm'}
                       title="cjone video mo" autoPlay={true} muted={true} loop={true} type="video/webm" >
                     </video>
                   </div>
                 </div>
               </div>
+              <ul>
+                <li>개인 작업물</li>
+                <li> 웹 접근성 검사 결과 보기</li>
+              </ul>
             </div>
 
             <div className='work_description'>
               <div className='description_space'>
-                <h3>삼성 엔지니어링<span>반응형</span></h3>
+                <h3>삼성 엔지니어링<span>Responsive</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -330,10 +332,6 @@ function Work() {
           <div className='work_content messanger'>
             <div className='work_preview'>
               <div className='mockup'>
-                <ul>
-                  <li>개인 작업물</li>
-                </ul>
-
                 <div className='mockup_app'>
 
                   <div className='tablet_mockup_m'>
@@ -353,11 +351,14 @@ function Work() {
                   </div>
                 </div>
               </div>
+              <ul>
+                <li>개인 작업물</li>
+              </ul>
             </div>
 
             <div className='work_description'>
               <div className='description_space'>
-                <h3>메신저 앱<span>반응형</span></h3>
+                <h3>메신저 앱<span>Responsive</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -398,9 +399,6 @@ function Work() {
           <div className='work_content netflix'>
             <div className='work_preview'>
               <div className='mockup'>
-                <ul>
-                  <li>개인 작업물</li>
-                </ul>
                 <div className='mockup_app'>
                   <div className='tablet_mockup_m'>
                     <div className='tablet_screen'>
@@ -418,10 +416,13 @@ function Work() {
                   </div>
                 </div>
               </div>
+              <ul>
+                <li>개인 작업물</li>
+              </ul>
             </div>
             <div className='work_description'>
               <div className='description_space'>
-                <h3>넷플릭스<span>반응형</span></h3>
+                <h3>넷플릭스<span>Responsive</span></h3>
                 <ul className='skill_name'>
                   <li>HTML</li>
                   <li>CSS</li>

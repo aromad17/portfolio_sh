@@ -179,15 +179,14 @@
 @media screen and (max-width:1200px) {
 
   .contact h3 {
-    font-size: 2.5rem;
     margin-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 30px;
   }
 
   .contact h3>svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    /* width: 2.5rem;
+    height: 2.5rem; */
   }
 
   .contact .touch>ul>li>dl>dt {
@@ -195,9 +194,7 @@
     font-size: 2rem;
   }
 
-  .contact .touch>ul>li>dl>dd {
-    font-size: 1.5rem;
-  }
+  .contact .touch>ul>li>dl>dd {}
 }
 
 @media screen and (max-width:845px) {
@@ -237,7 +234,6 @@
 
   .contact .touch>ul>li>dl>dt {
     margin-bottom: 20px;
-    font-size: 1.75rem;
   }
 
   .contact .touch>ul>li>dl>dd {
