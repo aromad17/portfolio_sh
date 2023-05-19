@@ -25,26 +25,38 @@ function Work() {
 
     window.addEventListener("scroll", () => {
       const windowScroll = window.scrollY || window.pageYOffset;
+      if (window.innerWidth > 845) {
+        if (windowScroll < 1600) {
+          workContent.forEach(item => {
+            item.style.opacity = 0;
+          })
 
-      console.log(windowScroll);
-      if (windowScroll < 1600) {
-
-        workContent.forEach(item => {
-          item.style.opacity = 0;
-        })
-
-      } else if (windowScroll >= 1900) {
-
-        workNum = 0;
-        workContent[0].style.opacity = 1;
-        console.log(workNum);
-        workMove.style.left = 0;
-        if (workNum === 0) {
-          prev.style.visibility = 'hidden';
+        } else if (windowScroll >= 1900) {
+          workNum = 0;
+          workContent[0].style.opacity = 1;
+          console.log(workNum);
+          workMove.style.left = 0;
+          if (workNum === 0) {
+            prev.style.visibility = 'hidden';
+            next.style.visibility = 'visible';
+          }
+        }
+      } else if (window.innerWidth <= 845) {
+        if (windowScroll < 1100) {
+          workContent.forEach(item => {
+            item.style.opacity = 0;
+          })
+        } else if (windowScroll >= 1100) {
+          workNum = 0;
+          workContent[0].style.opacity = 1;
+          workMove.style.left = 0;
+          if (workNum === 0) {
+            prev.style.visibility = 'hidden';
+            next.style.visibility = 'visible';
+          }
         }
       }
     })
-
 
     if (workNum === 0) {
       prev.style.visibility = 'hidden';
@@ -336,6 +348,7 @@ function Work() {
 
                   <div className='tablet_mockup_m'>
                     <div className='tablet_screen'>
+                      <img src={process.env.PUBLIC_URL + '/images/tablet_m.png'} alt="태블릿모바일" />
                       <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
                         title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>
@@ -344,6 +357,7 @@ function Work() {
 
                   <div className='phone_mockup_m'>
                     <div className='phone_screen'>
+                      <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                       <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
                         title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>
@@ -401,7 +415,9 @@ function Work() {
               <div className='mockup'>
                 <div className='mockup_app'>
                   <div className='tablet_mockup_m'>
+                    <img src='' alt='' />
                     <div className='tablet_screen'>
+                      <img src={process.env.PUBLIC_URL + '/images/tablet_m.png'} alt="태블릿모바일" />
                       <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
                         title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>
@@ -409,6 +425,7 @@ function Work() {
                   </div>
                   <div className='phone_mockup_m'>
                     <div className='phone_screen'>
+                      <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                       <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
                         title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>

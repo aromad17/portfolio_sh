@@ -32,13 +32,7 @@ function About() {
     about.style.transition = 'all 0.5s'; // 0.5초 동안 변화
     aboutMove.style.transition = 'all 0.5s linear 0s, opacity 1s linear 0s';
 
-    const aboutWid = aboutMove.offsetWidth;
-    if (aboutWid > 845) {
-      about.style.height = (aboutWid - 2000) + 'px';
-    }
-
-
-    window.addEventListener('scroll', () => {
+    function aboutEffect() {
       let scrollPosition = window.scrollY || window.pageYOffset;
 
       if (window.innerWidth > 846) {
@@ -71,32 +65,32 @@ function About() {
           }
         }
       } else if (window.innerWidth <= 845) {
-
-        // setInterval(moveFirstLiToEnd, 3500);
-        // (function ulLeft() {
-        //   const skills = document.querySelectorAll(".about_skills_bottom>ul");
-        //   let leftValue = 50;
-        //   setInterval(() => {
-        //     leftValue -= 50;
-        //     skills.forEach((ul) => {
-        //       ul.style.left = `${leftValue}px`;
-        //     });
-        //   }, 1000)
-        // })();
-
-
-
+        about.style.height = 100 + "vh";
+        about.style.position = 'relative';
+        about.style.top = '0';
+        sectionT.style.position = 'absolute';
+        sectionT.style.top = 20 + 'px';
+        aboutMove.style.position = 'absolute';
+        aboutMove.style.top = 50 + '%';
+        aboutMove.style.transform = 'translate(0%, -50%)';
         if (scrollPosition >= 400) {
-          console.log(123123123123)
-          about.style.position = 'relative';
-          about.style.top = '0';
-          sectionT.style.position = 'absolute';
-          sectionT.style.top = 20 + 'px';
-          aboutMove.style.position = 'abosolute';
           aboutMove.style.opacity = '1';
         }
-
       }
+    }
+
+    const aboutWid = aboutMove.offsetWidth;
+    if (aboutWid > 845) {
+      about.style.height = (aboutWid - 2000) + 'px';
+    }
+
+    window.addEventListener('resize', () => {
+      aboutEffect();
+    })
+
+
+    window.addEventListener('scroll', () => {
+      aboutEffect();
     });
   }, []);
 

@@ -61,14 +61,14 @@
 
   .section_title {
     top: 20px;
-    height: 80px;
-    font-size: 4rem;
+    height: 45px;
+    font-size: 2rem;
   }
 
   .section_title:before {
-    width: 80px;
-    height: 80px;
-    right: -40px;
+    width: 45px;
+    height: 45px;
+    right: -22.5px;
   }
 
   .section_title>ul {
@@ -76,7 +76,7 @@
   }
 
   .section_title>h2 {
-    line-height: 80px;
+    line-height: 45px;
   }
 
   .section_title>h2>span {

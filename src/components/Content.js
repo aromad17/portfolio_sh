@@ -113,6 +113,7 @@ function Content() {
     document.documentElement.style.setProperty("--vh", `${vh}px`);
     document.documentElement.style.setProperty("--vw", `${vw}px`);
   }
+
   useEffect(() => {
     const header = document.querySelector('header');
     const sideMenu = document.querySelector('.Menu');
@@ -123,6 +124,10 @@ function Content() {
     setTimeout(() => {
       header.style.height = 100 + 'px';
     }, 2000);
+
+    window.addEventListener('resize',()=>{
+      setScreenSize();
+    })
 
     window.addEventListener("scroll", () => {
       const scrollPosition = window.pageYOffset;

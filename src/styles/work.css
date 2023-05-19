@@ -208,13 +208,11 @@
   position: absolute;
   bottom: 0%;
   left: 50%;
-  width: 80%;
-  height: 100%;
-  border-radius: 20px;
-  border: 10px solid #000;
-  box-sizing: border-box;
+  width: 75%;
+  padding-bottom: 58%;
   transform: translateX(-50%);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-size: cover;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 
@@ -229,11 +227,22 @@
 }
 
 .tablet_mockup_m>.tablet_screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: white;
+  background: transparent;
   overflow: hidden;
+}
+
+.tablet_mockup_m>.tablet_screen>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
 
 .tablet_screen>video {
@@ -243,9 +252,14 @@
 }
 
 .tablet_mockup_m>.tablet_screen>video {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 97%;
+  height: 97%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .phone_mockup {
@@ -255,7 +269,6 @@
   width: 12%;
   padding-bottom: 24%;
   transform: translateX(-10%) rotateY(-30deg) rotateX(10deg);
-  /* background-image: url(../../public/images/phone.png); */
   background-size: cover;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
@@ -274,14 +287,11 @@
 .phone_mockup_m {
   position: absolute;
   bottom: 0%;
-  right: -5%;
-  width: 20%;
-  height: 70%;
-  border-radius: 20px;
-  border: 10px solid #000;
-  box-sizing: border-box;
-  transform: translateX(-50%);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  right: 5%;
+  width: 12%;
+  padding-bottom: 24%;
+  background-size: cover;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .phone_screen>img {
@@ -295,13 +305,15 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: white;
   overflow: hidden;
 }
 
 .phone_screen>video {
   position: absolute;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
   height: 95%;
   object-fit: cover;
 }
@@ -456,11 +468,11 @@
   border: 1px solid purple;
 }
 */
-
 @media screen and (max-width:1200px) {
   .work_wrap {
     top: unset;
     bottom: 0;
+    height: calc(100% - 220px);
   }
 
   .work_content {
@@ -481,7 +493,7 @@
   }
 
   .mockup {
-    width: 50%;
+    width: 35%;
     height: 100%;
     position: unset;
     transform: translateY(0%);
@@ -494,7 +506,7 @@
     align-items: center;
     width: 80%;
     gap: 5%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .description_space {
@@ -504,7 +516,7 @@
   .description_space>dl {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .description_space>dl>dt {
@@ -514,11 +526,21 @@
     border-bottom: 1px solid #fff;
   }
 
+  .description_space>dl>dd {
+    font-size: 1rem;
+    margin-right: 30px;
+  }
+
+  .description_space>dl>dd:nth-child(1) {
+    margin-right: 0;
+  }
+
   .work_preview>ul {
     width: 35%;
     height: 100%;
     position: unset;
     flex-direction: column;
+    justify-content: end;
   }
 
   .work_preview>ul>li {
@@ -534,59 +556,65 @@
 
 @media screen and (max-width:845px) {
   .work_wrap {
-    height: 100%;
-    top: 0;
+    top: 50px;
+    height: calc(100% - 50px);
   }
 
-  .work_content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .work_controller {
-    width: 90%;
-    top: 210px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  .work_description {
-    width: 100%;
-  }
-
-  .mockup {
-    position: absolute;
+  .skill_name {
+    margin-bottom: 20px;
   }
 
   .work_preview {
-    display: block;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .mockup {
+    width: 60%;
+    height: 50%;
+    margin-bottom: 0px;
+  }
+
+  .work_preview>ul {
+    flex-direction: row;
+    height: 70px;
+    width: 100%;
+    justify-content: center
+  }
+
+  .work_preview>ul>li {
     width: 50%;
+    height: 70%;
   }
 
-  .description_space {
-    padding: 30px;
+  .description_space>h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 
-  .description_space>dl {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .description_space>ul {
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .description_space>ul>li {
+    height: 30px;
+    font-size: 0.8rem;
+    line-height: 30px;
+    margin-right: 5px;
+    padding: 0 20px;
   }
 
   .description_space>dl>dt {
-    width: 100%;
-    padding-bottom: 10px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #fff;
+    font-size: 1.5rem
   }
 
-  .mockup>ul {
-    bottom: -40%;
+  .description_space>dl>dd>dl {
+    margin-bottom: 10px;
   }
 
-  .mockup>ul>li {
-    width: 50%;
+  .description_space>dl>dd>dl>dd {
+    margin-bottom: 10px;
   }
-
 
 }
