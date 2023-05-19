@@ -55,12 +55,14 @@ function About() {
             aboutMove.style.top = '250px';
             aboutMove.style.transform = 'translateX(' + leftPercentage + ')';
             aboutMove.style.opacity = '1';
+
             if (Number(leftPercentage.replace('%', '')) < -60) {
               about.style.position = 'sticky';
               about.style.top = "0";
               about.style.zIndex = 0;
               aboutMove.style.transform = 'translateX(-60%)';
               aboutMove.style.opacity = '1';
+              aboutMove.style.zIndex = -1;
             }
           }
         }

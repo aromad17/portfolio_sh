@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  width: 100%;
+  width: calc(var(--vw, 1vw) * 100);
   height: calc(var(--vh, 1vh) * 100);
   background: #242226;
 }
@@ -31,18 +31,18 @@
   margin-top: 30px;
   padding-bottom: 30px;
   opacity: 0;
-    transition: all 0.8s linear 0s;
-  }
-  
-  .contact h3 span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 0%;
-    height: 1px;
-    background: #e6e9de;
-    transition: all 0.5s linear 0.5s;
+  transition: all 0.8s linear 0s;
+}
+
+.contact h3 span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #e6e9de;
+  transition: all 0.5s linear 0.5s;
 }
 
 .contact h3>svg {
@@ -67,9 +67,9 @@
   justify-content: flex-start;
   width: 100%;
   opacity: 0;
-    margin-top: 30px;
-    transform: translateY(-230%);
-    transition: transform 1s linear 0.8s, opacity 1s linear 1.3s;
+  margin-top: 30px;
+  transform: translateY(-230%);
+  transition: transform 1s linear 0.8s, opacity 1s linear 1.3s;
 }
 
 .contact .touch>div>ul>li {
@@ -111,10 +111,10 @@
   align-self: center;
   align-items: center;
   transform: translateY(-120%);
-    width: 100%;
-    margin-top: 30px;
-    opacity: 0;
-    transition: transform 1s linear 0.8s, opacity 1.3s linear 1.3s;
+  width: 100%;
+  margin-top: 30px;
+  opacity: 0;
+  transition: transform 1s linear 0.8s, opacity 1.3s linear 1.3s;
 }
 
 .form_con {
@@ -183,40 +183,37 @@
     padding-bottom: 15px;
     margin-bottom: 30px;
   }
-   .contact .touch>ul>li>dl>dt {
+
+  .contact .touch>ul>li>dl>dt {
     margin-bottom: 20px;
     font-size: 2rem;
   }
 
-.contact .touch>ul>li>dl>dd {}
+  .contact .touch>ul>li>dl>dd {}
 
 }
 
 @media screen and (max-width:845px) {
-
-  .contact {
-    width: 100%;
-  }
-
   .contact_wrap {
     width: 100%;
     align-items: center;
   }
 
   .contact h3 {
-    width: auto;
+    width: 100%;
     font-size: 2rem;
     margin-bottom: 0;
   }
-    .contact .touch {
+
+  .contact .touch {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 70%;
+    width: 80%;
     height: 100%;
   }
-  
+
   .contact .touch ul {
     flex-direction: column;
     align-items: flex-start;
@@ -226,11 +223,14 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
-    .contact .touch>div>ul>li>dl>dt {
-      margin-bottom: 10px;
-  }
-    .contact .touch>div>ul>li>dl>dd {
+
+  .contact .touch>div>ul>li>dl>dt {
     font-size: 1.25rem;
+    margin-bottom: 5px;
+  }
+
+  .contact .touch>div>ul>li>dl>dd {
+    font-size: 2.5rem;
   }
 
   .mail {

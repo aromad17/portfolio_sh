@@ -60,7 +60,7 @@ body {
   margin: 0;
   background: #E6E9DE;
   font-family: AppleSDGothicNeoM;
-
+  overflow-x: hidden;
 }
 
 

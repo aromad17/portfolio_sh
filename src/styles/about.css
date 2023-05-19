@@ -307,7 +307,7 @@
 
 @media screen and (max-width:845px) {
   .about {
-    width: 100%;
+    width: 100vw;
   }
 
   .about_skills {

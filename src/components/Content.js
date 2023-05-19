@@ -17,11 +17,6 @@ function Content() {
   const intervalIdRef = useRef(null); // New ref for storing the interval ID
 
   const animatedHeader = useCallback(() => {
-    window.addEventListener('scroll', () => {
-      const scrollHeight = window.scrollY || window.pageYOffset;
-      console.log(scrollHeight);
-    });
-
 
     const header = document.querySelector('header');
     const ulElement = document.querySelector('.content header ul');
@@ -67,7 +62,7 @@ function Content() {
 
     const startInterval = () => {
       if (ulElement.childElementCount >= 30) {
-        return; // Stop if there are already 30 or more li elements
+        return;
       }
 
       intervalIdRef.current = setTimeout(() => {
@@ -99,7 +94,6 @@ function Content() {
 
     // Cleanup function
     return () => {
-
       window.removeEventListener('scroll', () => { });
       header.removeEventListener('mouseenter', () => { });
       header.removeEventListener('mouseleave', () => { });
@@ -114,19 +108,40 @@ function Content() {
     document.documentElement.style.setProperty("--vw", `${vw}px`);
   }
 
+  function scrollOnepage() {
+    if (window.innerWidth < 845) {
+      const handleWheel = (event) => {
+        const delta = event.deltaY;
+        const windowHeight = window.innerHeight;
+
+        if (delta > 0) {
+          // 아래로 스크롤되었을 때
+          window.scroll({ top: windowHeight, behavior: 'smooth' });
+        } else if (delta < 0) {
+          // 위로 스크롤되었을 때
+          window.scroll({ top: -windowHeight, behavior: 'smooth' });
+        }
+      };
+
+      window.addEventListener('wheel', handleWheel);
+
+      return () => {
+        window.removeEventListener('wheel', handleWheel);
+      };
+    }
+  }
+
   useEffect(() => {
     const header = document.querySelector('header');
-    const sideMenu = document.querySelector('.Menu');
     const ham = document.querySelector('.ham');
 
+    scrollOnepage()
     animatedHeader();
     setScreenSize();
-    setTimeout(() => {
-      header.style.height = 100 + 'px';
-    }, 2000);
 
-    window.addEventListener('resize',()=>{
+    window.addEventListener('resize', () => {
       setScreenSize();
+      scrollOnepage()
     })
 
     window.addEventListener("scroll", () => {
@@ -145,7 +160,11 @@ function Content() {
 
 
     setTimeout(() => {
-      header.style.height = '100px';
+      if (window.innerWidth > 1000) {
+        header.style.height = '100px';
+      } else if (window.innerWidth <= 1000) {
+        header.style.height = '70px';
+      }
     }, 2000);
 
     window.addEventListener('scroll', () => {
@@ -180,6 +199,9 @@ function Content() {
         })
       })
     })
+
+
+
 
   }, []);
 

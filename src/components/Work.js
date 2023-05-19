@@ -26,7 +26,7 @@ function Work() {
     window.addEventListener("scroll", () => {
       const windowScroll = window.scrollY || window.pageYOffset;
       if (window.innerWidth > 845) {
-        if (windowScroll < 1600) {
+        if (windowScroll < 1400) {
           workContent.forEach(item => {
             item.style.opacity = 0;
           })
@@ -161,8 +161,8 @@ function Work() {
                 </div>
               </div>
               <ul>
-                <li>개인 작업물</li>
-                <li> 웹 접근성 검사 결과 보기</li>
+                <li>기여도 : 100%</li>
+                <li>웹 접근성 검사 결과 보기</li>
               </ul>
             </div>
             <div className='work_description'>
@@ -220,7 +220,7 @@ function Work() {
                 </div>
               </div>
               <ul>
-                <li>개인 작업물</li>
+                <li>기여도 : 100%</li>
                 <li> 웹 접근성 검사 결과 보기</li>
               </ul>
             </div>
@@ -293,7 +293,7 @@ function Work() {
                 </div>
               </div>
               <ul>
-                <li>개인 작업물</li>
+                <li>기여도 : 100%</li>
                 <li> 웹 접근성 검사 결과 보기</li>
               </ul>
             </div>
@@ -366,7 +366,7 @@ function Work() {
                 </div>
               </div>
               <ul>
-                <li>개인 작업물</li>
+                <li>기여도 : 100%</li>
               </ul>
             </div>
 
@@ -434,7 +434,7 @@ function Work() {
                 </div>
               </div>
               <ul>
-                <li>개인 작업물</li>
+                <li>기여도 : 100%</li>
               </ul>
             </div>
             <div className='work_description'>

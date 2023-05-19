@@ -39,35 +39,65 @@ function Contact() {
 
     window.addEventListener('scroll', () => {
       const scrollPosition = window.scrollY || window.pageYOffset;
-      if (scrollPosition <= 3100) {
+      console.log(scrollPosition)
+      if (window.innerWidth > 845) {
+        if (scrollPosition <= 3100) {
 
-        titleLines.forEach(line => {
-          line.style.width = 0;
-        });
+          titleLines.forEach(line => {
+            line.style.width = 0;
+          });
 
-        title.forEach(item => {
-          item.style.opacity = 0;
-        });
+          title.forEach(item => {
+            item.style.opacity = 0;
+          });
 
-        touchCon.style.transform = "translateY(-230%)";
-        touchCon.style.opacity = 0;
-        fomrCont.style.transform = "translateY(-120%)";
-        fomrCont.style.opacity = 0;
+          touchCon.style.transform = "translateY(-230%)";
+          touchCon.style.opacity = 0;
+          fomrCont.style.transform = "translateY(-120%)";
+          fomrCont.style.opacity = 0;
 
 
-      } else if (scrollPosition > 3100) {
-        titleLines.forEach(line => {
-          line.style.width = 100 + '%';
-        });
+        } else if (scrollPosition > 3100) {
+          titleLines.forEach(line => {
+            line.style.width = 100 + '%';
+          });
 
-        title.forEach(item => {
-          item.style.opacity = 1;
-        });
+          title.forEach(item => {
+            item.style.opacity = 1;
+          });
 
-        touchCon.style.transform = "translateY(0%)";
-        touchCon.style.opacity = 1;
-        fomrCont.style.transform = "translateY(0%)";
-        fomrCont.style.opacity = 1;
+          touchCon.style.transform = "translateY(0%)";
+          touchCon.style.opacity = 1;
+          fomrCont.style.transform = "translateY(0%)";
+          fomrCont.style.opacity = 1;
+        }
+      } else if (window.innerWidth <= 845) {
+        if (scrollPosition < 1980) {
+          titleLines.forEach(line => {
+            line.style.width = 0;
+          });
+
+          title.forEach(item => {
+            item.style.opacity = 0;
+          });
+
+          touchCon.style.transform = "translateY(-230%)";
+          touchCon.style.opacity = 0;
+          fomrCont.style.transform = "translateY(-120%)";
+          fomrCont.style.opacity = 0;
+
+        } else if (scrollPosition >= 1900) {
+          titleLines.forEach(line => {
+            line.style.width = 100 + '%';
+          });
+
+          title.forEach(item => {
+            item.style.opacity = 1;
+          });
+
+          touchCon.style.transform = "translateY(0%)";
+          touchCon.style.opacity = 1;
+        }
       }
     });
   })
@@ -76,7 +106,8 @@ function Contact() {
 
   return (
     <div className='contact'>
-
+      <div className='bg_circle'></div>
+      <div className='bg_circle'></div>
       <div className='section_title'>
         <h2>Contact</h2>
       </div>
