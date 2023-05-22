@@ -56,143 +56,145 @@ function Intro() {
 
 
   return (
-    <div className='intro top_move'>
-      <div className='intro_left'>
-        <div className='intro_polygon'>
+    <div className='intro_frame'>
+      <div className='intro top_move'>
+        <div className='intro_left'>
+          <div className='intro_polygon'>
 
-          <div className="pl">
-            <svg className="pl__rings" viewBox="0 0 50% 50%" width="100%" height="100%">
-              <g fill="none" strokeLinecap="round" strokeWidth="4">
-                <g className="pl__ring" transform="rotate(0)">
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+            <div className="pl">
+              <svg className="pl__rings" viewBox="0 0 50% 50%" width="100%" height="100%">
+                <g fill="none" strokeLinecap="round" strokeWidth="4">
+                  <g className="pl__ring" transform="rotate(0)">
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(0)">
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(0)">
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(0)">
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(180)">
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(180)">
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                    <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(0)">
+                    <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                    <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                  </g>
+                  <g className="pl__ring" transform="rotate(180)">
+                    <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                    <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                    <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                    <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                  </g>
                 </g>
-                <g className="pl__ring" transform="rotate(0)">
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
-                </g>
-                <g className="pl__ring" transform="rotate(0)">
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
-                </g>
-                <g className="pl__ring" transform="rotate(0)">
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
-                </g>
-                <g className="pl__ring" transform="rotate(180)">
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
-                </g>
-                <g className="pl__ring" transform="rotate(180)">
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
-                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
-                </g>
-                <g className="pl__ring" transform="rotate(0)">
-                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
-                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
-                </g>
-                <g className="pl__ring" transform="rotate(180)">
-                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
-                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
-                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
-                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
-                </g>
-              </g>
-            </svg>
-            <div className="pl__nucleus">
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
-              <div className="pl__nucleus-particle"></div>
+              </svg>
+              <div className="pl__nucleus">
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+                <div className="pl__nucleus-particle"></div>
+              </div>
             </div>
+
+          </div>
+          <div className='intro_left_texts texts'>
+            <span>
+              <ul>
+                <li>J</li>
+                <li>A</li>
+                <li>V</li>
+                <li>A</li>
+                <li></li>
+                <li>S</li>
+                <li>C</li>
+                <li>R</li>
+                <li>I</li>
+                <li>P</li>
+                <li>T</li>
+              </ul>
+            </span>
+            <span>
+              <ul>
+                <li>R</li>
+                <li>E</li>
+                <li>A</li>
+                <li>C</li>
+                <li>T</li>
+              </ul>
+            </span>
+          </div>
+        </div>
+
+        <div className='intro_content'>
+          <div className='intro_content_logo'>
+            <h1 className="main-title">{typeText}<span className='typing_bar'>|</span></h1>
           </div>
 
-        </div>
-        <div className='intro_left_texts texts'>
-          <span>
-            <ul>
-              <li>J</li>
-              <li>A</li>
-              <li>V</li>
-              <li>A</li>
-              <li></li>
-              <li>S</li>
-              <li>C</li>
-              <li>R</li>
-              <li>I</li>
-              <li>P</li>
-              <li>T</li>
-            </ul>
-          </span>
-          <span>
-            <ul>
-              <li>R</li>
-              <li>E</li>
-              <li>A</li>
-              <li>C</li>
-              <li>T</li>
-            </ul>
-          </span>
-        </div>
-      </div>
+          <div className='intro_content_right texts'>
+            <span>
+              <ul>
+                <li>F</li>
+                <li>R</li>
+                <li>O</li>
+                <li>N</li>
+                <li>T</li>
+                <li>&nbsp;</li>
+                <li>E</li>
+                <li>N</li>
+                <li>D</li>
+              </ul>
+            </span>
+            <span>
+              <ul>
+                <li>H</li>
+                <li>T</li>
+                <li>M</li>
+                <li>L</li>
+                <li>&nbsp;</li>
+                <li>+</li>
+                <li>&nbsp;</li>
+                <li>C</li>
+                <li>S</li>
+                <li>S</li>
+              </ul>
+            </span>
+          </div>
 
-      <div className='intro_content'>
-        <div className='intro_content_logo'>
-          <h1 className="main-title">{typeText}<span className='typing_bar'>|</span></h1>
-        </div>
+          <div className='intro_content_footer'>
+            <div class="glitch" data-text="프론트엔드 개발자">편의성과 창의성을 추구하는 <strong>프론트엔드 개발자</strong></div>
 
-        <div className='intro_content_right texts'>
-          <span>
-            <ul>
-              <li>F</li>
-              <li>R</li>
-              <li>O</li>
-              <li>N</li>
-              <li>T</li>
-              <li>&nbsp;</li>
-              <li>E</li>
-              <li>N</li>
-              <li>D</li>
-            </ul>
-          </span>
-          <span>
-            <ul>
-              <li>H</li>
-              <li>T</li>
-              <li>M</li>
-              <li>L</li>
-              <li>&nbsp;</li>
-              <li>+</li>
-              <li>&nbsp;</li>
-              <li>C</li>
-              <li>S</li>
-              <li>S</li>
-            </ul>
-          </span>
-        </div>
-
-        <div className='intro_content_footer'>
-          <div class="glitch" data-text="프론트엔드 개발자">편의성과 창의성을 추구하는 <strong>프론트엔드 개발자</strong></div>
-
-          <div className='scroll_down'>
-            <div className='scroll_ani'>
+            <div className='scroll_down'>
+              <div className='scroll_ani'>
+              </div>
+              <span>SCROLL DOWN</span>
             </div>
-            <span>SCROLL DOWN</span>
           </div>
         </div>
       </div>

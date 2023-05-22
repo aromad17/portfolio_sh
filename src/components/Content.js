@@ -123,7 +123,11 @@ function Content() {
 
     window.addEventListener('resize', () => {
       setScreenSize();
-
+      if (window.innerWidth > 1000) {
+        header.style.height = 100 + 'px';
+      } else if (window.innerWidth <= 1000) {
+        header.style.height = 70 + 'px';
+      }
     })
 
     window.addEventListener("scroll", () => {
@@ -143,9 +147,9 @@ function Content() {
 
     setTimeout(() => {
       if (window.innerWidth > 1000) {
-        header.style.height = '100px';
+        header.style.height = 100 + 'px';
       } else if (window.innerWidth <= 1000) {
-        header.style.height = '70px';
+        header.style.height = 70 + 'px';
       }
     }, 2000);
 

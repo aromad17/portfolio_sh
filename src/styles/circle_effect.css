@@ -21,7 +21,6 @@
     width: 128px;
     height: 128px;
     transform: scale(2);
-    opacity: 0.8;
 }
 
 .pl__nucleus,
@@ -230,4 +229,11 @@
     to {
         transform: rotateY(-1turn) rotateZ(-145deg) translateY(-100%) rotateZ(145deg) rotateY(1turn);
     }
+}
+
+@media screen and (max-width:1000px) {
+    .pl {
+        opacity: 0.8;
+    }
+
 }

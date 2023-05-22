@@ -1,9 +1,11 @@
+.about_frame {
+  background: #242226;
+}
+
 .about {
   position: relative;
   width: 200vw;
   height: calc(var(--vh, 1vh) * 100);
-  background: #242226;
-  overflow-x: hidden;
 }
 
 .about_me_wrap,
@@ -14,11 +16,12 @@
 }
 
 .about .contents {
-  height: calc(calc(var(--vh, 1vh) * 100) - 250px);
+  height: calc(calc(var(--vh, 1vh) * 100) - 300px);
   opacity: 0;
   border: 5px solid #E6E9DE;
   border-radius: 20px;
   box-sizing: border-box;
+  top: 200px;
 }
 
 .about_me {
