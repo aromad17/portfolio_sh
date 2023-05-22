@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import $ from 'jquery';
 import 'styles/sidemenu.scss';
+import Content from './Content';
 
 
-function Sidemenu({ isHamOn, setIsHamOn }) {
+function Sidemenu({ isHamOn, setIsHamOn, isHamSpanOn, setIsHamSpanOn }) {
 
   useEffect(() => {
     var $menu = $('.Menu-list'),
@@ -41,51 +42,67 @@ function Sidemenu({ isHamOn, setIsHamOn }) {
 
     const liCon = document.querySelectorAll(".Menu-list li");
     const windowHeight = window.innerHeight;
-    const menu = document.querySelector(".Menu")
-
-    const height = [0, 969, 2810, 3795]
-
+    const menu = document.querySelector(".Menu");
+    const moveH = window.innerHeight;
+    const topElement = Array.from(document.querySelectorAll(".top_move"));
+    
     liCon.forEach((item, idx) => {
       item.addEventListener("click", () => {
-
         menu.classList.remove("on");
-
-        window.scroll({
-          top: height[idx],
-          left: 0,
-          // behavior: 'smooth'
-        })
-      })
-    })
+        const targetElement = topElement[idx];
+    
+        if (targetElement) {
+          const rect = targetElement.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const targetTop = rect.top + scrollTop;
+    
+          window.scrollTo({
+            top: targetTop,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   }, [])
 
+  const handleHamClick = (e) => {
+    e.preventDefault();
+    setIsHamOn((prev) => !prev);
+    setIsHamSpanOn((prev) => !prev);
+  };
 
   return (
     <div className={`Menu ${isHamOn ? 'on' : ''}`}>
       <ul className="Menu-list" data-offset="10">
-        <li className="Menu-list-item" data-offset="20">
+        <li className="Menu-list-item" data-offset="20"
+          onClick={handleHamClick}
+        >
           Home
           <span className="Mask"><span>Intro</span></span>
           <span className="Mask"><span>Intro</span></span>
         </li>
-        <li className="Menu-list-item" data-offset="16">
+        <li className="Menu-list-item" data-offset="16"
+          onClick={handleHamClick}
+        >
           About
           <span className="Mask"><span>About</span></span>
           <span className="Mask"><span>About</span></span>
         </li>
-        <li className="Menu-list-item" data-offset="12">
+        <li className="Menu-list-item" data-offset="12"
+          onClick={handleHamClick}
+        >
           Work
           <span className="Mask"><span>Work</span></span>
           <span className="Mask"><span>Work</span></span>
         </li>
-        <li className="Menu-list-item" data-offset="8">
+        <li className="Menu-list-item" data-offset="8"
+          onClick={handleHamClick}
+        >
           Contact
           <span className="Mask"><span>Contact</span></span>
           <span className="Mask"><span>Contact</span></span>
         </li>
-
-
-
       </ul>
     </div>
 

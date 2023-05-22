@@ -33,7 +33,7 @@ function Contact() {
     const contactCon = document.querySelector(".contact .contents");
     const title = contactCon.querySelectorAll('h3');
     const titleLines = document.querySelectorAll('.contact .contents h3 span');
-    const touchCon = document.querySelector(".touch ul");
+    const touchCont = document.querySelector(".touch ul");
     const fomrCont = document.querySelector(".mail form");
 
 
@@ -51,8 +51,8 @@ function Contact() {
             item.style.opacity = 0;
           });
 
-          touchCon.style.transform = "translateY(-230%)";
-          touchCon.style.opacity = 0;
+          touchCont.style.transform = "translateY(-230%)";
+          touchCont.style.opacity = 0;
           fomrCont.style.transform = "translateY(-120%)";
           fomrCont.style.opacity = 0;
 
@@ -66,8 +66,8 @@ function Contact() {
             item.style.opacity = 1;
           });
 
-          touchCon.style.transform = "translateY(0%)";
-          touchCon.style.opacity = 1;
+          touchCont.style.transform = "translateY(0%)";
+          touchCont.style.opacity = 1;
           fomrCont.style.transform = "translateY(0%)";
           fomrCont.style.opacity = 1;
         }
@@ -81,8 +81,8 @@ function Contact() {
             item.style.opacity = 0;
           });
 
-          touchCon.style.transform = "translateY(-230%)";
-          touchCon.style.opacity = 0;
+          touchCont.style.transform = "translateY(-230%)";
+          touchCont.style.opacity = 0;
           fomrCont.style.transform = "translateY(-120%)";
           fomrCont.style.opacity = 0;
 
@@ -95,8 +95,36 @@ function Contact() {
             item.style.opacity = 1;
           });
 
-          touchCon.style.transform = "translateY(0%)";
-          touchCon.style.opacity = 1;
+          touchCont.style.transform = "translateY(0%)";
+          touchCont.style.opacity = 1;
+        }
+        if(window.innerWidth<680){
+          if (scrollPosition < 1480) {
+            titleLines.forEach(line => {
+              line.style.width = 0;
+            });
+  
+            title.forEach(item => {
+              item.style.opacity = 0;
+            });
+  
+            touchCont.style.transform = "translateY(-230%)";
+            touchCont.style.opacity = 0;
+            fomrCont.style.transform = "translateY(-120%)";
+            fomrCont.style.opacity = 0;
+  
+          } else if (scrollPosition >= 1480) {
+            titleLines.forEach(line => {
+              line.style.width = 100 + '%';
+            });
+          
+            title.forEach(item => {
+              item.style.opacity = 1;
+            });
+          
+            touchCont.style.transform = "translateY(0%)";
+            touchCont.style.opacity = 1;
+          }
         }
       }
     });
@@ -105,7 +133,7 @@ function Contact() {
 
 
   return (
-    <div className='contact'>
+    <div className='contact top_move'>
       <div className='bg_circle'></div>
       <div className='bg_circle'></div>
       <div className='section_title'>

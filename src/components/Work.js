@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import 'styles/work.css'
 import { FaCircle, FaChrome, FaGithub } from "react-icons/fa";
 import 'styles/bg_effect.scss'
+
 function Work() {
 
   useEffect(() => {
@@ -117,7 +118,7 @@ function Work() {
 
 
   return (
-    <div className='work'>
+    <div className='work top_move'>
 
 
       <div className='section_title'>
@@ -246,6 +247,7 @@ function Work() {
                       <dt>주요 기술</dt>
                       <dd><FaCircle />CSS를 활용한 Animation 구현 </dd>
                       <dd><FaCircle />JAVASCRIPT를 이용한 2depth 메뉴 구현</dd>
+                      <dd><FaCircle />JAVASCRIPT를 이용해 Image-Slide 구현</dd>
                     </dl>
                   </dd>
                 </dl>
@@ -390,6 +392,8 @@ function Work() {
                       <dd><FaCircle />FIREBASE와 연동하여 실시간 데이터 수정 가능</dd>
                       <dd><FaCircle />API 데이터를 이용하여 화면 컨텐츠 구성</dd>
                       <dd><FaCircle />FIREBASE를 이용한 SOCIAL 계정으로 회원가입, 로그인 가능</dd>
+                      <dd><FaCircle />SCSS이용한 스타일링</dd>
+                      <dd><FaCircle />SREACT-DOM_ROUTER를 이용한 SPA</dd>
                     </dl>
                   </dd>
                 </dl>
@@ -454,10 +458,11 @@ function Work() {
                   <dd>
                     <dl>
                       <dt>주요 기술</dt>
-                      <dd><FaCircle />FIREBASE 연동으로 회원가입,로그인,회원 정보 수정 기능 구현</dd>
+                      <dd><FaCircle />FIREBASE 연동으로 회원가입,로그인,로그아웃 기능 구현</dd>
                       <dd><FaCircle />Axios를 사용한 외부 API 이용</dd>
                       <dd><FaCircle />리액트 라우터 v6의 중첩 라우팅 사용</dd>
                       <dd><FaCircle />SCSS 적용</dd>
+                      <dd><FaCircle />styled components 적용</dd>
                     </dl>
                   </dd>
                 </dl>

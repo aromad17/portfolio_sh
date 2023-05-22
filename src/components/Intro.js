@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'styles/intro.css'
-import 'styles/polygon.css'
+import 'styles/circle_effect.css'
+import 'styles/text_glitch.scss'
 function Intro() {
   const completionWord = 'LEE SANG HYEON';
 
@@ -23,12 +24,6 @@ function Intro() {
         item.style.animationDelay = 1 * idx + "s";
       });
 
-      const circle = document.querySelectorAll('.circle');
-      circle.forEach((item, idx) => {
-        setTimeout(() => {
-          item.style.transform = `translateX(0px)`;
-        }, 500 * idx);
-      });
 
       const texts = document.querySelectorAll('.texts span ul');
       texts.forEach((item, idx) => {
@@ -39,17 +34,20 @@ function Intro() {
       });
     };
 
-    const circles = document.querySelectorAll('.circle');
-    const animateWave = () => {
-      circles.forEach((circle, index) => {
-        setTimeout(() => {
-          circle.classList.add('wave');
-        }, index * 2000); // 2초 간격으로 파동 애니메이션 시작
-      });
-    };
-
-    animateWave();
     executeOtherAnimations();
+
+
+    if (window.innerWidth >= 1000) {
+      const intro = document.querySelector(".intro_content_logo");
+      const myName = document.querySelector(".main-title");
+      intro.addEventListener("mousemove", (e) => {
+        let posX = e.pageX / 80;
+        let posY = e.pageY / 80;
+        myName.style.right = 0 - posX + "px";
+        myName.style.bottom = 0 - posY + "px";
+      })
+    }
+
 
 
   }, [count, completionWord]);
@@ -58,19 +56,72 @@ function Intro() {
 
 
   return (
-    <div className='intro'>
+    <div className='intro top_move'>
       <div className='intro_left'>
         <div className='intro_polygon'>
-          <div className="wrapper">
-            <div className="cube">
-              <div className="one"></div>
-              <div className="two"></div>
-              <div className="three"></div>
-              <div className="four"></div>
-              <div className="five"></div>
-              <div className="six"></div>
+
+          <div className="pl">
+            <svg className="pl__rings" viewBox="0 0 50% 50%" width="100%" height="100%">
+              <g fill="none" strokeLinecap="round" strokeWidth="4">
+                <g className="pl__ring" transform="rotate(0)">
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                </g>
+                <g className="pl__ring" transform="rotate(0)">
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                </g>
+                <g className="pl__ring" transform="rotate(0)">
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                </g>
+                <g className="pl__ring" transform="rotate(0)">
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                </g>
+                <g className="pl__ring" transform="rotate(180)">
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                </g>
+                <g className="pl__ring" transform="rotate(180)">
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="hsla(422,90%,50%,0)" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="50 240" />
+                  <ellipse className="pl__orbit" cx="64" cy="64" rx="60" ry="30" stroke="#242226" strokeDasharray="25 265" />
+                </g>
+                <g className="pl__ring" transform="rotate(0)">
+                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                </g>
+                <g className="pl__ring" transform="rotate(180)">
+                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                  <ellipse className="pl__electron" cx="64" cy="64" rx="60" ry="30" stroke="hsl(0,0%,100%)" strokeDasharray="1 289" strokeWidth="8" />
+                </g>
+              </g>
+            </svg>
+            <div className="pl__nucleus">
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
+              <div className="pl__nucleus-particle"></div>
             </div>
           </div>
+
         </div>
         <div className='intro_left_texts texts'>
           <span>
@@ -136,11 +187,7 @@ function Intro() {
         </div>
 
         <div className='intro_content_footer'>
-          <div className='circles'>
-            <div className='circle'></div>
-            <div className='circle'></div>
-            <div className='circle'></div>
-          </div>
+          <div class="glitch" data-text="프론트엔드 개발자">편의성과 창의성을 갖춘 프론트엔드 개발자</div>
 
           <div className='scroll_down'>
             <div className='scroll_ani'>

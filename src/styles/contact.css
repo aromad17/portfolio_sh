@@ -100,7 +100,9 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  width:100%;
   overflow: hidden;
 }
 
@@ -111,7 +113,7 @@
   align-self: center;
   align-items: center;
   transform: translateY(-120%);
-  width: 100%;
+  width: 50%;
   margin-top: 30px;
   opacity: 0;
   transition: transform 1s linear 0.8s, opacity 1.3s linear 1.3s;

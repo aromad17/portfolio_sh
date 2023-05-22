@@ -37,7 +37,7 @@
   width: 50%;
   padding-top: 30px;
   writing-mode: vertical-lr;
-  font-size: 6rem;
+  font-size: 8vh;
   font-family: AppleSDGothicNeoSB;
   border: 1px solid #242226;
   border-top: none;
@@ -69,6 +69,7 @@
 }
 
 .intro>.intro_content>.intro_content_logo>.main-title {
+  position: relative;
   display: inline;
   font-family: AppleSDGothicNeoH;
   font-size: 8rem;
@@ -110,7 +111,7 @@
   width: 50%;
   padding-top: 80px;
   writing-mode: vertical-lr;
-  font-size: 6rem;
+  font-size: 8vh;
   font-family: AppleSDGothicNeoSB;
   border: 1px solid #242226;
   box-sizing: border-box;
@@ -138,7 +139,7 @@
 .intro>.intro_content span ul li,
 .intro_left_texts span ul li {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   animation: letter 20s linear 0s infinite;
 }
 
@@ -158,6 +159,8 @@
 
 .intro>.intro_content>.intro_content_footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 215px;
   border: 1px solid #242226;
@@ -166,51 +169,12 @@
   border-right: none;
   box-sizing: border-box;
   border-collapse: collapse;
+  font-size: 3vw;
+
 }
 
 .intro>.intro_content>.intro_content_footer>.scroll_down {
   display: none;
-}
-
-.circles {
-  display: flex;
-}
-
-.circle {
-  position: relative;
-  width: 215px;
-  height: 215px;
-  border: 1px solid #242226;
-  border-radius: 50%;
-  box-sizing: border-box;
-  cursor: pointer;
-  border-collapse: collapse;
-  background: transparent;
-  transition: background 0.3s bounce 0s, transform 1s linear 0s;
-  transform: translateX(2000px);
-}
-
-.circle:hover {
-  background: #242226;
-}
-
-
-.circle:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #242226;
-  transition: all 0.3s linear 0s;
-}
-
-.circle:hover::before {
-  background: #E6E9DE;
 }
 
 @media screen and (max-width:1000px) {
@@ -238,6 +202,9 @@
     text-align: center;
     box-sizing: border-box;
     word-break: keep-all;
+    margin-bottom: 15vh;
+    color: #242226;
+    font-size: 6.5rem;
   }
 
   .intro>.intro_content>.intro_content_footer {
@@ -248,11 +215,13 @@
   .intro>.intro_left>.intro_left_texts,
   .intro>.intro_content>.intro_content_right,
   .intro>.intro_left>.intro_left_texts>span,
-  .intro>.intro_content>.intro_content_right>span,
-
-  .circles {
+  .intro>.intro_content>.intro_content_right>span {
     display: none;
   }
+
+  /* .circles {
+    display: none;
+  } */
 
   .intro>.intro_content>.intro_content_footer>.scroll_down {
     position: absolute;

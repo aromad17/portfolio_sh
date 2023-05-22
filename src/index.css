@@ -63,6 +63,9 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
 
 ::selection {
   background-color: #ff7f50;

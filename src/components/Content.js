@@ -20,7 +20,6 @@ function Content() {
 
     const header = document.querySelector('header');
     const ulElement = document.querySelector('.content header ul');
-    const liElement = document.querySelector('.content header ul li');
 
     const liContent = [
       {
@@ -77,10 +76,12 @@ function Content() {
 
         currentIndexRef.current = (currentIndexRef.current + 1) % liContent.length;
 
-        startInterval(); // Recursive call
+        startInterval();
       }, 2000);
 
     };
+
+    startInterval();
 
     header.addEventListener('mouseenter', () => {
       ulElement.style.animationPlayState = 'paused';
@@ -98,6 +99,9 @@ function Content() {
       header.removeEventListener('mouseenter', () => { });
       header.removeEventListener('mouseleave', () => { });
     };
+
+
+
   }, []);
 
 
@@ -108,40 +112,18 @@ function Content() {
     document.documentElement.style.setProperty("--vw", `${vw}px`);
   }
 
-  function scrollOnepage() {
-    if (window.innerWidth < 845) {
-      const handleWheel = (event) => {
-        const delta = event.deltaY;
-        const windowHeight = window.innerHeight;
 
-        if (delta > 0) {
-          // 아래로 스크롤되었을 때
-          window.scroll({ top: windowHeight, behavior: 'smooth' });
-        } else if (delta < 0) {
-          // 위로 스크롤되었을 때
-          window.scroll({ top: -windowHeight, behavior: 'smooth' });
-        }
-      };
-
-      window.addEventListener('wheel', handleWheel);
-
-      return () => {
-        window.removeEventListener('wheel', handleWheel);
-      };
-    }
-  }
 
   useEffect(() => {
     const header = document.querySelector('header');
     const ham = document.querySelector('.ham');
 
-    scrollOnepage()
     animatedHeader();
     setScreenSize();
 
     window.addEventListener('resize', () => {
       setScreenSize();
-      scrollOnepage()
+
     })
 
     window.addEventListener("scroll", () => {
@@ -254,7 +236,7 @@ function Content() {
         }
         {/* <span className = {`${isSpanHover ? 'on' : ''}`} onMouseEnter={handleSpanHover} onMouseLeave={handleSpanHover}>{isHamSpanOn ? "CLOSE" : "SEE ALL" }</span> */}
       </div>
-      <Sidemenu setIsHamOn={setIsHamOn} isHamOn={isHamOn} />
+      <Sidemenu setIsHamOn={setIsHamOn} isHamOn={isHamOn} isHamSpanOn={isHamSpanOn} setIsHamSpanOn={setIsHamSpanOn} />
       <Intro />
       <About />
       <Work />

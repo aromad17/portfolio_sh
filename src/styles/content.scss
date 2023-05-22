@@ -1,7 +1,6 @@
 .content {
   position: relative;
   height: auto;
-  
   header {
     position: fixed;
     top: calc(calc(var(--vh, 1vh) * 100) - 315px);
@@ -157,6 +156,7 @@
 
   @media screen and (max-width:845px) {
       .content{
+        overflow: hidden;
 
       .ham{
         top:30px;
