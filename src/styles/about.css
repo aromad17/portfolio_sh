@@ -16,7 +16,7 @@
 .about .contents {
   height: calc(calc(var(--vh, 1vh) * 100) - 250px);
   opacity: 0;
-  border:5px solid #E6E9DE;
+  border: 5px solid #E6E9DE;
   border-radius: 20px;
   box-sizing: border-box;
 }
@@ -223,7 +223,6 @@
   content: "";
   display: block;
   position: absolute;
-  left: -20%;
   width: 100%;
   height: 20px;
 }
@@ -235,38 +234,47 @@
 
 .skill_html>.skill_status:before {
   background: #FF4E1D;
+  left: -10%;
 }
 
 .skill_css>.skill_status:before {
   background: #0277BD;
+  left: -20%;
 }
 
 .skill_js>.skill_status:before {
   background: #FFCA28;
+  left: -20%;
 }
 
 .skill_react>.skill_status:before {
   background: #00CCFF;
+  left: -30%;
 }
 
 .skill_ts>.skill_status:before {
   background: #017ACB;
+  left: -50%;
 }
 
 .skill_sass>.skill_status:before {
   background: #CD6799;
+  left: -20%;
 }
 
 .skill_figma>.skill_status:before {
   background: #0ACF83;
+  left: -20%;
 }
 
 .skill_photoshop>.skill_status:before {
   background: #31C5F0;
+  left: -30%;
 }
 
 .skill_illustrator>.skill_status:before {
   background: #FF7F18;
+  left: -30%;
 }
 
 .skill_html>.skill_percentage {
@@ -321,7 +329,7 @@
     top: 50%;
     transform: translateY(-50%);
     height: calc(calc(var(--vh, 1vh) * 100)- 200px);
-    border:none;
+    border: none;
   }
 
   .about_skills_wrap {

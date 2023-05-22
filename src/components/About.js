@@ -66,7 +66,7 @@ function About() {
 
     const aboutWid = aboutMove.offsetWidth;
     if (aboutWid > 845) {
-      about.style.height = (aboutWid-2000) + 'px';
+      about.style.height = (aboutWid - 2000) + 'px';
     }
 
     window.addEventListener('resize', () => {
@@ -153,7 +153,7 @@ function About() {
 
                       <img src={process.env.PUBLIC_URL + '/images/me.png'} alt="me" />
                       <p>&#128075;안녕하세요&#128075; <br />
-                      저는 사용자 인터페이스를 생각하는
+                        저는 사용자 인터페이스를 생각하는
                         프론트엔드 개발자 <strong>이상현</strong> 입니다!
                       </p>
                     </div>
@@ -201,31 +201,31 @@ function About() {
                           html5
                         </span>
                         <span className='skill_percentage'>
-                          70%
+                          90%
                         </span>
                       </li>
                       <li className='skill_css'>
                         <img src={process.env.PUBLIC_URL + '/images/css3.png'} alt='css3' />
                         <span className='skill_status'>
-                          html5
+                          CSS3
                         </span>
                         <span className='skill_percentage'>
-                          70%
+                          80%
                         </span>
                       </li>
                       <li className='skill_js'>
                         <img src={process.env.PUBLIC_URL + '/images/javascript.png'} alt='javascript' />
                         <span className='skill_status'>
-                          html5
+                          JAVASCRIPT
                         </span>
                         <span className='skill_percentage'>
-                          70%
+                          80%
                         </span>
                       </li>
                       <li className='skill_react'>
                         <img src={process.env.PUBLIC_URL + '/images/react.png'} alt='react' />
                         <span className='skill_status'>
-                          html5
+                          REACT
                         </span>
                         <span className='skill_percentage'>
                           70%
@@ -234,34 +234,34 @@ function About() {
                       <li className='skill_ts'>
                         <img src={process.env.PUBLIC_URL + '/images/typescript.png'} alt='typescript' />
                         <span className='skill_status'>
-                          html5
+                          TS
                         </span>
                         <span className='skill_percentage'>
-                          70%
+                          50%
                         </span>
                       </li>
                       <li className='skill_sass'>
                         <img src={process.env.PUBLIC_URL + '/images/sass.png'} alt='sass' />
                         <span className='skill_status'>
-                          html5
+                          SASS
                         </span>
                         <span className='skill_percentage'>
-                          70%
+                          80%
                         </span>
                       </li>
                       <li className='skill_figma'>
                         <img src={process.env.PUBLIC_URL + '/images/figma.png'} alt='figma' />
                         <span className='skill_status'>
-                          html5
+                          FIGMA
                         </span>
                         <span className='skill_percentage'>
-                          70%
+                          80%
                         </span>
                       </li>
                       <li className='skill_photoshop'>
                         <img src={process.env.PUBLIC_URL + '/images/photoshop.png'} alt='photoshop' />
                         <span className='skill_status'>
-                          html5
+                          PHOTOSHOP
                         </span>
                         <span className='skill_percentage'>
                           70%
@@ -270,7 +270,7 @@ function About() {
                       <li className='skill_illustrator'>
                         <img src={process.env.PUBLIC_URL + '/images/illustrator.png'} alt='illustrator' />
                         <span className='skill_status'>
-                          html5
+                          illustrator
                         </span>
                         <span className='skill_percentage'>
                           70%
@@ -283,38 +283,38 @@ function About() {
               </div>
             </div>
             <div className='about_skills_bottom'>
-              <ul>
+              <ul className='about_skills_icon'>
                 <li className='skill_html'>
                   <img src={process.env.PUBLIC_URL + '/images/html5.png'} alt='html5' />
                   <span className='skill_status'>
                     html5
                   </span>
                   <span className='skill_percentage'>
-                    70%
+                    90%
                   </span>
                 </li>
                 <li className='skill_css'>
                   <img src={process.env.PUBLIC_URL + '/images/css3.png'} alt='css3' />
                   <span className='skill_status'>
-                    html5
+                    CSS3
                   </span>
                   <span className='skill_percentage'>
-                    70%
+                    80%
                   </span>
                 </li>
                 <li className='skill_js'>
                   <img src={process.env.PUBLIC_URL + '/images/javascript.png'} alt='javascript' />
                   <span className='skill_status'>
-                    html5
+                    JAVASCRIPT
                   </span>
                   <span className='skill_percentage'>
-                    70%
+                    80%
                   </span>
                 </li>
                 <li className='skill_react'>
                   <img src={process.env.PUBLIC_URL + '/images/react.png'} alt='react' />
                   <span className='skill_status'>
-                    html5
+                    REACT
                   </span>
                   <span className='skill_percentage'>
                     70%
@@ -323,34 +323,34 @@ function About() {
                 <li className='skill_ts'>
                   <img src={process.env.PUBLIC_URL + '/images/typescript.png'} alt='typescript' />
                   <span className='skill_status'>
-                    html5
+                    TS
                   </span>
                   <span className='skill_percentage'>
-                    70%
+                    50%
                   </span>
                 </li>
                 <li className='skill_sass'>
                   <img src={process.env.PUBLIC_URL + '/images/sass.png'} alt='sass' />
                   <span className='skill_status'>
-                    html5
+                    SASS
                   </span>
                   <span className='skill_percentage'>
-                    70%
+                    80%
                   </span>
                 </li>
                 <li className='skill_figma'>
                   <img src={process.env.PUBLIC_URL + '/images/figma.png'} alt='figma' />
                   <span className='skill_status'>
-                    html5
+                    FIGMA
                   </span>
                   <span className='skill_percentage'>
-                    70%
+                    80%
                   </span>
                 </li>
                 <li className='skill_photoshop'>
                   <img src={process.env.PUBLIC_URL + '/images/photoshop.png'} alt='photoshop' />
                   <span className='skill_status'>
-                    html5
+                    PHOTOSHOP
                   </span>
                   <span className='skill_percentage'>
                     70%
@@ -359,7 +359,7 @@ function About() {
                 <li className='skill_illustrator'>
                   <img src={process.env.PUBLIC_URL + '/images/illustrator.png'} alt='illustrator' />
                   <span className='skill_status'>
-                    html5
+                    illustrator
                   </span>
                   <span className='skill_percentage'>
                     70%

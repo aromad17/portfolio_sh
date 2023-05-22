@@ -6,8 +6,12 @@
   width:auto;
   margin:0 auto;
   text-align: right;
-  background:#e6e9de;
   line-height:1.5;
+  font-weight: 600;
+}
+
+.glitch strong{
+  color:#ff7f50;
 }
 
 @keyframes noise-anim{
@@ -23,10 +27,10 @@
   position:absolute;
   right:0px;
   bottom:0;
-  text-shadow:-1px 0 red;
+  text-shadow:-1px 0 #e1e1e1;
   top:0;
-  color:#242226;
-  background:#e6e9de;
+  color:#e6e9de;
+  background:#ff7f50;
   overflow:hidden;
   clip:rect(0,900px,0,0); 
   animation:noise-anim 5s infinite linear alternate-reverse;
@@ -44,10 +48,9 @@
   content:attr(data-text);
   position:absolute;
   right:0px;
-  text-shadow:1px 0 blue; 
+  text-shadow:1px 0 #e1e1e1; 
   top:0;
-  color:white;
-  background:black;
+  color:#e6e9de;
   overflow:hidden;
   clip:rect(0,900px,0,0); 
   animation:noise-anim-2 5s infinite linear alternate-reverse;
@@ -57,7 +60,7 @@
   .glitch{
     font-size:1.5rem;
     position: absolute;
-    top:-55%;
+    top:-70%;
   }
   
 }
