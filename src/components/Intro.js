@@ -48,6 +48,11 @@ function Intro() {
       })
     }
 
+    const glitch = document.querySelector('.glitch');
+
+    setTimeout(() => {
+      glitch.style.opacity = 1;
+    }, 0);
 
 
   }, [count, completionWord]);
@@ -188,7 +193,7 @@ function Intro() {
           </div>
 
           <div className='intro_content_footer'>
-            <div class="glitch" data-text="프론트엔드 개발자">편의성과 창의성을 추구하는 <strong>프론트엔드 개발자</strong></div>
+            <div className="glitch" data-text="프론트엔드 개발자">편의성과 창의성을 추구하는 <strong>프론트엔드 개발자</strong></div>
 
             <div className='scroll_down'>
               <div className='scroll_ani'>

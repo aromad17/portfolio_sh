@@ -13,7 +13,7 @@ function About() {
     const aboutMove = document.querySelector('.about');
     const aboutCon = document.querySelector('.about .contents')
     const sectionT = document.querySelector('.about .section_title');
-    about.style.transition = 'all 0.5s'; // 0.5초 동안 변화
+    aboutCon.style.transition = 'all 0.5s'; // 0.5초 동안 변화
     aboutMove.style.transition = 'all 0.5s linear 0s, opacity 1s linear 0s';
 
     function aboutEffect() {
@@ -36,29 +36,31 @@ function About() {
             aboutCon.style.opacity = '1';
 
             if (Number(leftPercentage.replace('%', '')) < -60) {
-              aboutMove.style.zIndex = 0;
+              aboutCon.style.zIndex = 0;
               aboutCon.style.transform = 'translateX(-60%)';
               aboutCon.style.opacity = '1';
             }
           }
         }
       } else if (window.innerWidth <= 1000) {
+        if(scrollPosition<500){
         about.style.height = 100 + "vh";
         about.style.position = 'relative';
         about.style.top = '0';
         sectionT.style.position = 'absolute';
         sectionT.style.top = 20 + 'px';
-        aboutMove.style.position = 'absolute';
-        aboutMove.style.top = 50 + '%';
-        aboutMove.style.transform = 'translate(0%, -45%)';
-        if (scrollPosition >= 400) {
-          aboutMove.style.opacity = '1';
+        aboutCon.style.position = 'absolute';
+        aboutCon.style.top = 50 + '%';
+        aboutCon.style.opacity = '0';
+        aboutCon.style.transform = 'translate(0%, -45%)';
+        } else if (scrollPosition >= 500) {
+          aboutCon.style.opacity = '1';
         }
       }
     }
 
     const aboutWid = aboutMove.offsetWidth;
-    if (aboutWid > 845) {
+    if (aboutWid > 1000) {
       about.style.height = (aboutWid - 2000) + 'px';
     }
 

@@ -22,6 +22,7 @@
   border-radius: 20px;
   box-sizing: border-box;
   top: 200px;
+  transition: all  0.3s linear 0s;
 }
 
 .about_me {

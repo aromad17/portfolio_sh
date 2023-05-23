@@ -1,9 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'styles/work.css'
 import { FaCircle, FaChrome, FaGithub } from "react-icons/fa";
 import 'styles/bg_effect.scss'
+import Accessibility from './Accessibility';
 
 function Work() {
+  const [isClicked, setIsClicked] = useState(false);
+  const [workName, setWorkName] = useState('');
+
+  const onClick = (work) => {
+    setIsClicked(true);
+    setWorkName(work);
+  }
+
 
   useEffect(() => {
     const workMove = document.querySelector('.work .contents');
@@ -35,7 +44,6 @@ function Work() {
         } else if (windowScroll >= 1900) {
           workNum = 0;
           workContent[0].style.opacity = 1;
-          console.log(workNum);
           workMove.style.left = 0;
           if (workNum === 0) {
             prev.style.visibility = 'hidden';
@@ -109,18 +117,17 @@ function Work() {
       activation(Math.abs(workNum), workContent);
       constrolVisible();
     })
-
-
-
-
-
   }, []);
-
 
   return (
     <div className='work_frame'>
       <div className='work top_move'>
 
+        {isClicked ?
+          <Accessibility workName={workName} setWorkName={setWorkName} setIsClicked={setIsClicked} />
+          :
+          <></>
+        }
 
         <div className='section_title'>
           <h2>Work</h2>
@@ -164,7 +171,7 @@ function Work() {
                 </div>
                 <ul>
                   <li>기여도 : 100%</li>
-                  <li>웹 접근성 검사 결과 보기</li>
+                  <li onClick={() => { onClick('cj') }}>웹 접근성 검사 결과 보기</li>
                 </ul>
               </div>
               <div className='work_description'>
@@ -223,7 +230,7 @@ function Work() {
                 </div>
                 <ul>
                   <li>기여도 : 100%</li>
-                  <li> 웹 접근성 검사 결과 보기</li>
+                  <li onClick={() => { onClick('ss_electric') }}> 웹 접근성 검사 결과 보기</li>
                 </ul>
               </div>
               <div className='work_description'>
@@ -274,29 +281,29 @@ function Work() {
                   <div className='pc_mockup'>
                     <div className='pc_screen'>
                       <video src={process.env.PUBLIC_URL + '/images/ssengineering.webm'}
-                        title="cjone video" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                        title="samsung engineering video" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>
                     </div>
                   </div>
                   <div className='tablet_mockup'>
                     <div className='tablet_screen'>
-                      <video src={process.env.PUBLIC_URL + '/images/cjone_vid_tablet.mp4'}
-                        title="cjone video tablet" autoPlay={true} muted={true} loop={true} type="video/mp4" >
+                      <video src={process.env.PUBLIC_URL + '/images/ssengineering_tablet.webm'}
+                        title="samsung engineering video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>
                     </div>
                   </div>
                   <div className='phone_mockup'>
                     <div className='phone_screen'>
                       <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
-                      <video src={process.env.PUBLIC_URL + '/images/cjone_vid_mo.webm'}
-                        title="cjone video mo" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                      <video src={process.env.PUBLIC_URL + '/images/ssengineering_mo.webm'}
+                        title="samsung engineering video mo" autoPlay={true} muted={true} loop={true} type="video/webm" >
                       </video>
                     </div>
                   </div>
                 </div>
                 <ul>
                   <li>기여도 : 100%</li>
-                  <li> 웹 접근성 검사 결과 보기</li>
+                  <li onClick={() => { onClick('ss_engineering') }}>웹 접근성 검사 결과 보기</li>
                 </ul>
               </div>
 
@@ -351,7 +358,7 @@ function Work() {
                     <div className='tablet_mockup_m'>
                       <div className='tablet_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/tablet_m.png'} alt="태블릿모바일" />
-                        <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
+                        <video src={process.env.PUBLIC_URL + '/images/kakao_tablet.webm'}
                           title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                         </video>
                       </div>
@@ -360,7 +367,7 @@ function Work() {
                     <div className='phone_mockup_m'>
                       <div className='phone_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
-                        <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
+                        <video src={process.env.PUBLIC_URL + '/images/kakao_mo.webm'}
                           title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                         </video>
                       </div>
@@ -422,7 +429,7 @@ function Work() {
                       <img src='' alt='' />
                       <div className='tablet_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/tablet_m.png'} alt="태블릿모바일" />
-                        <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
+                        <video src={process.env.PUBLIC_URL + '/images/netflix_tablet.webm'}
                           title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                         </video>
                       </div>
@@ -430,7 +437,7 @@ function Work() {
                     <div className='phone_mockup_m'>
                       <div className='phone_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
-                        <video src={process.env.PUBLIC_URL + '/images/netflix.webm'}
+                        <video src={process.env.PUBLIC_URL + '/images/netflix_mo.webm'}
                           title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
                         </video>
                       </div>

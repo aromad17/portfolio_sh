@@ -36,12 +36,11 @@ function Contact() {
     const touchCont = document.querySelector(".touch ul");
     const fomrCont = document.querySelector(".mail form");
 
-
-    window.addEventListener('scroll', () => {
+    function contactScroll(){ 
       const scrollPosition = window.scrollY || window.pageYOffset;
-      console.log(scrollPosition)
+      console.log(scrollPosition);
       if (window.innerWidth > 845) {
-        if (scrollPosition <= 3100) {
+        if (scrollPosition <= 2070) {
 
           titleLines.forEach(line => {
             line.style.width = 0;
@@ -57,7 +56,7 @@ function Contact() {
           fomrCont.style.opacity = 0;
 
 
-        } else if (scrollPosition > 3100) {
+        } else if (scrollPosition > 2070) {
           titleLines.forEach(line => {
             line.style.width = 100 + '%';
           });
@@ -127,8 +126,19 @@ function Contact() {
           }
         }
       }
+    }
+
+    window.addEventListener('scroll', () => {
+      contactScroll();
     });
-  })
+    window.addEventListener('resize',()=>{
+      contactScroll();
+    });
+
+
+
+
+  });
 
 
 
