@@ -403,7 +403,7 @@ function Work() {
                         <dd><FaCircle />API 데이터를 이용하여 화면 컨텐츠 구성</dd>
                         <dd><FaCircle />FIREBASE를 이용한 SOCIAL 계정으로 회원가입, 로그인 가능</dd>
                         <dd><FaCircle />SCSS이용한 스타일링</dd>
-                        <dd><FaCircle />SREACT-DOM_ROUTER를 이용한 SPA</dd>
+                        <dd><FaCircle />REACT-DOM_ROUTER를 이용한 SPA</dd>
                       </dl>
                     </dd>
                   </dl>
