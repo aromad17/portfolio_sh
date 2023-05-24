@@ -14,7 +14,7 @@ function Intro() {
       const typingInterval = setTimeout(() => {
         setTypeText((prevTitleValue) => prevTitleValue + completionWord[count]);
         setCount((prevCount) => prevCount + 1);
-      }, 300);
+      }, 100);
       return () => clearTimeout(typingInterval);
     }
 
