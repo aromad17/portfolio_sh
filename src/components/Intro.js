@@ -19,11 +19,11 @@ function Intro() {
     }
 
     const executeOtherAnimations = () => {
-      const letter = document.querySelectorAll('span ul li');
-      letter.forEach((item, idx) => {
-        item.style.animationDelay = 1 * idx + "s";
-      });
 
+      const javascript = document.querySelectorAll('.javascript li');
+      const react = document.querySelectorAll('.react li');
+      const frontend = document.querySelectorAll('.frontend li');
+      const html = document.querySelectorAll('.html li');
 
       const texts = document.querySelectorAll('.texts span ul');
       texts.forEach((item, idx) => {
@@ -32,6 +32,25 @@ function Intro() {
           item.style.opacity = '1';
         }, 0);
       });
+
+
+
+      javascript.forEach((item, idx) => {
+        item.style.animationDelay = 0.4 * idx + "s";
+      });
+
+      react.forEach((item, idx) => {
+        item.style.animationDelay = 0.7 * idx + "s";
+      });
+
+      frontend.forEach((item, idx) => {
+        item.style.animationDelay = 0.55 * idx + "s";
+      });
+
+      html.forEach((item, idx) => {
+        item.style.animationDelay = 1.1 * idx + "s";
+      });
+
     };
 
     executeOtherAnimations();
@@ -41,8 +60,8 @@ function Intro() {
       const intro = document.querySelector(".intro_content_logo");
       const myName = document.querySelector(".main-title");
       intro.addEventListener("mousemove", (e) => {
-        let posX = e.pageX / 80;
-        let posY = e.pageY / 80;
+        let posX = e.pageX / 20;
+        let posY = e.pageY / 20;
         myName.style.right = 0 - posX + "px";
         myName.style.bottom = 0 - posY + "px";
       })
@@ -52,6 +71,12 @@ function Intro() {
 
     setTimeout(() => {
       glitch.style.opacity = 1;
+    }, 0);
+
+    const pl = document.querySelector(".pl");
+
+    setTimeout(() => {
+      pl.style.opacity = 1;
     }, 0);
 
 
@@ -131,7 +156,7 @@ function Intro() {
           </div>
           <div className='intro_left_texts texts'>
             <span>
-              <ul>
+              <ul className='javascript'>
                 <li>J</li>
                 <li>A</li>
                 <li>V</li>
@@ -146,7 +171,7 @@ function Intro() {
               </ul>
             </span>
             <span>
-              <ul>
+              <ul className='react'>
                 <li>R</li>
                 <li>E</li>
                 <li>A</li>
@@ -164,7 +189,7 @@ function Intro() {
 
           <div className='intro_content_right texts'>
             <span>
-              <ul>
+              <ul className='frontend'>
                 <li>F</li>
                 <li>R</li>
                 <li>O</li>
@@ -177,7 +202,7 @@ function Intro() {
               </ul>
             </span>
             <span>
-              <ul>
+              <ul className='html'>
                 <li>H</li>
                 <li>T</li>
                 <li>M</li>

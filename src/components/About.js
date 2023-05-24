@@ -78,11 +78,7 @@ function About() {
       <div className='about top_move'>
 
         <div className='section_title'>
-          <h2>About <span>-</span>&nbsp;</h2>
-          <ul>
-            <li>Me</li>
-            <li>Skill</li>
-          </ul>
+          <h2>About</h2>
         </div>
         <div className='contents'>
           <div className='about_me_wrap'>

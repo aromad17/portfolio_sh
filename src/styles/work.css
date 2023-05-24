@@ -645,3 +645,20 @@
   }
 
 }
+
+@media screen and (max-width:500px) {
+  .description_space>dl>dd {
+    margin-bottom: 15px;
+  }
+
+  .description_space>dl>dd>dl>dt {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .description_space>dl>dd>dl>dd {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+
+  }
+}

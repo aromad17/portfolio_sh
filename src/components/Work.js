@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import 'styles/work.css'
 import { FaCircle, FaChrome, FaGithub } from "react-icons/fa";
-import 'styles/bg_effect.scss'
 import Accessibility from './Accessibility';
 
 function Work() {
@@ -279,6 +278,7 @@ function Work() {
             {/* 삼성엔지니어링 */}
             <div className='work_content samsung_engineering'>
               <div className='work_preview'>
+
                 <div className='mockup'>
                   <div className='pc_mockup'>
                     <div className='pc_screen'>
@@ -494,10 +494,6 @@ function Work() {
             {/* 넷플 */}
           </div>
         </div>
-
-
-
-
       </div >
     </div>
 
