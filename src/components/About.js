@@ -43,16 +43,16 @@ function About() {
           }
         }
       } else if (window.innerWidth <= 1000) {
-        if(scrollPosition<500){
-        about.style.height = 100 + "vh";
-        about.style.position = 'relative';
-        about.style.top = '0';
-        sectionT.style.position = 'absolute';
-        sectionT.style.top = 20 + 'px';
-        aboutCon.style.position = 'absolute';
-        aboutCon.style.top = 50 + '%';
-        aboutCon.style.opacity = '0';
-        aboutCon.style.transform = 'translate(0%, -45%)';
+        if (scrollPosition < 500) {
+          about.style.height = 100 + "vh";
+          about.style.position = 'relative';
+          about.style.top = '0';
+          sectionT.style.position = 'absolute';
+          sectionT.style.top = 20 + 'px';
+          aboutCon.style.position = 'absolute';
+          aboutCon.style.top = 50 + '%';
+          aboutCon.style.opacity = '0';
+          aboutCon.style.transform = 'translate(0%, -45%)';
         } else if (scrollPosition >= 500) {
           aboutCon.style.opacity = '1';
         }
@@ -259,7 +259,7 @@ function About() {
                             PHOTOSHOP
                           </span>
                           <span className='skill_percentage'>
-                            70%
+                            80%
                           </span>
                         </li>
                         <li className='skill_illustrator'>
@@ -268,7 +268,7 @@ function About() {
                             illustrator
                           </span>
                           <span className='skill_percentage'>
-                            70%
+                            75%
                           </span>
                         </li>
                       </ul>
@@ -348,7 +348,7 @@ function About() {
                       PHOTOSHOP
                     </span>
                     <span className='skill_percentage'>
-                      70%
+                      80%
                     </span>
                   </li>
                   <li className='skill_illustrator'>
@@ -357,7 +357,7 @@ function About() {
                       illustrator
                     </span>
                     <span className='skill_percentage'>
-                      70%
+                      75%
                     </span>
                   </li>
                 </ul>

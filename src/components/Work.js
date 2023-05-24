@@ -197,6 +197,7 @@ function Work() {
                         <dd><FaCircle />media query를 이용한 반응형 웹 페이지</dd>
                         <dd><FaCircle />CSS를 활용한 Animation 구현</dd>
                         <dd><FaCircle />JAVASCRIPT을 이용한 gif 이미지 구현</dd>
+                        <dd><FaCircle />중복되는 코드 함수로 만들어 여러곳에서 활용</dd>
                       </dl>
                     </dd>
                   </dl>
@@ -255,6 +256,7 @@ function Work() {
                         <dt>주요 기술</dt>
                         <dd><FaCircle />CSS를 활용한 Animation 구현 </dd>
                         <dd><FaCircle />JAVASCRIPT를 이용한 2depth 메뉴와 Image-Slide 구현</dd>
+                        <dd><FaCircle />중복되는 자바스크립트 코드 함수로 만들어 여러곳에서 활용</dd>
                       </dl>
                     </dd>
                   </dl>
@@ -330,6 +332,7 @@ function Work() {
                         <dd><FaCircle />CSS를 활용한 Animation 구현</dd>
                         <dd><FaCircle />form,table 양식 서브 페이지 구현</dd>
                         <dd><FaCircle />JAVASCRIPT로 영상배너 연속재생 및 pagination 구현</dd>
+                        <dd><FaCircle />중복되는 자바스크립트 코드 함수로 만들어 여러곳에서 활용</dd>
                       </dl>
                     </dd>
                   </dl>
@@ -388,7 +391,7 @@ function Work() {
                     <li>JAVASCRIPT</li>
                     <li>REACT</li>
                   </ul>
-                  <dl className=''>
+                  <dl>
                     <dt>주요 업무</dt>
                     <dd className='spa'>
                       Single Page Application
@@ -457,7 +460,7 @@ function Work() {
                     <li>JAVASCRIPT</li>
                     <li>REACT</li>
                   </ul>
-                  <dl className=''>
+                  <dl>
                     <dt>주요 업무</dt>
                     <dd className='spa'>
                       Single Page Application

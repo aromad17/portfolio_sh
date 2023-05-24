@@ -33,10 +33,10 @@ function Contact() {
     const contactCon = document.querySelector(".contact .contents");
     const title = contactCon.querySelectorAll('h3');
     const titleLines = document.querySelectorAll('.contact .contents h3 span');
-    const touchCont = document.querySelector(".touch ul");
+    const touchCont = document.querySelector(".contact .touch ul");
     const fomrCont = document.querySelector(".mail form");
 
-    function contactScroll(){ 
+    function contactScroll() {
       const scrollPosition = window.scrollY || window.pageYOffset;
       console.log(scrollPosition);
       if (window.innerWidth > 845) {
@@ -131,7 +131,7 @@ function Contact() {
     window.addEventListener('scroll', () => {
       contactScroll();
     });
-    window.addEventListener('resize',()=>{
+    window.addEventListener('resize', () => {
       contactScroll();
     });
 

@@ -381,7 +381,8 @@
 
 .description_space>dl>dt {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .description_space>dl>dd.spa {
@@ -407,7 +408,7 @@
 .description_space>dl>dd>dl>dd {
   position: relative;
   list-style: disc;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding-left: 20px;
   font-size: 1rem;
   font-family: AppleSDGothicNeoUL;
@@ -632,7 +633,7 @@
 
   .description_space>dl>dd {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .description_space>dl>dd>dl {
