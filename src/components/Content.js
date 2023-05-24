@@ -168,25 +168,6 @@ function Content() {
 
     });
 
-    const height = [0, 969, 2810, 3795]
-    const liCon = document.querySelectorAll(".content>header>ul>li");
-    let num = 0;
-    let beforeCalc;
-
-    liCon.forEach((item, idx) => {
-
-      item.addEventListener("click", () => {
-        const result = idx % 3 + 1;
-
-        window.scroll({
-          top: height[result],
-          behavior: 'smooth'
-
-        })
-      })
-    })
-
-
 
 
   }, []);

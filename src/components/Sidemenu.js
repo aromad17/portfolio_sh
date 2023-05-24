@@ -45,17 +45,17 @@ function Sidemenu({ isHamOn, setIsHamOn, isHamSpanOn, setIsHamSpanOn }) {
     const menu = document.querySelector(".Menu");
     const moveH = window.innerHeight;
     const topElement = Array.from(document.querySelectorAll(".top_move"));
-    
+
     liCon.forEach((item, idx) => {
       item.addEventListener("click", () => {
         menu.classList.remove("on");
         const targetElement = topElement[idx];
-    
+
         if (targetElement) {
           const rect = targetElement.getBoundingClientRect();
           const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
           const targetTop = rect.top + scrollTop;
-    
+
           window.scrollTo({
             top: targetTop,
             left: 0,

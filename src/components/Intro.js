@@ -55,7 +55,6 @@ function Intro() {
 
     executeOtherAnimations();
 
-
     if (window.innerWidth >= 1000) {
       const intro = document.querySelector(".intro_content_logo");
       const myName = document.querySelector(".main-title");
