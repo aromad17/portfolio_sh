@@ -1,0 +1,68 @@
+
+.glitch{
+  color:#242226;
+  font-size:3vw;
+  position:relative;
+  width:auto;
+  margin:0 auto;
+  text-align: right;
+  line-height:1.5;
+  font-weight: 600;
+  opacity:0;
+  transition: opacity 1s linear 0s;
+}
+
+.glitch strong{
+  color:#ff7f50;
+}
+
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  right:0px;
+  bottom:0;
+  text-shadow:-1px 0 #e1e1e1;
+  top:0;
+  color:#e6e9de;
+  background:#ff7f50;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 5s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  right:0px;
+  text-shadow:1px 0 #e1e1e1; 
+  top:0;
+  color:#e6e9de;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 5s infinite linear alternate-reverse;
+}
+
+@media screen and (max-width:1000px){
+  .glitch{
+    font-size:1.5rem;
+    position: absolute;
+    top:-70%;
+  }
+  
+}

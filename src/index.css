@@ -1,0 +1,85 @@
+/* 두껍게 */
+@font-face {
+  font-family: AppleSDGothicNeoH;
+  src: url(../font/AppleSDGothicNeoH.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoEB;
+  src: url(../font/AppleSDGothicNeoEB.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoB;
+  src: url(../font/AppleSDGothicNeoB.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoSB;
+  src: url(../font/AppleSDGothicNeoSB.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoM;
+  src: url(../font/AppleSDGothicNeoM.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoL;
+  src: url(../font/AppleSDGothicNeoL.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoR;
+  src: url(../font/AppleSDGothicNeoR.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoUL;
+  src: url(../font/AppleSDGothicNeoUL.ttf);
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoT;
+  src: url(../font/AppleSDGothicNeoT.ttf);
+}
+
+/* 얇게 */
+
+html {
+  font-size: 16px;
+}
+
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #E6E9DE;
+  font-family: AppleSDGothicNeoM;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+::selection {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+@media screen and (max-width:845px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  html {
+    font-size: 12px;
+  }
+}
