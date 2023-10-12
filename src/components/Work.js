@@ -203,7 +203,7 @@ function Work() {
                 </div>
                 <ul className='link'>
                   <li>
-                    <a href="https://aromad17.github.io/cjone_clone/" title="cjone 클론 사이트로 이동" target='_blank'>
+                    <a href="http://cjone.sanghyeonzzang.com/" title="cjone 클론 사이트로 이동" target='_blank'>
                       <FaChrome />
                     </a>
                   </li>
@@ -262,7 +262,7 @@ function Work() {
                 </div>
                 <ul className='link'>
                   <li>
-                    <a href="https://aromad17.github.io/samsung-electric_clone/" title="삼성전기 클론 사이트로 이동" target='_blank'>
+                    <a href="http://ss_electric.sanghyeonzzang.com/" title="삼성전기 클론 사이트로 이동" target='_blank'>
                       <FaChrome />
                     </a>
                   </li>
@@ -339,7 +339,7 @@ function Work() {
                 </div>
                 <ul className='link'>
                   <li>
-                    <a href="https://aromad17.github.io/samsung-engineering_clone/" title="삼성엔지니어링 클론 사이트로 이동" target='_blank'>
+                    <a href="http://ss_engineering.sanghyeonzzang.com/" title="삼성엔지니어링 클론 사이트로 이동" target='_blank'>
                       <FaChrome />
                     </a>
                   </li>
@@ -410,7 +410,7 @@ function Work() {
                 </div>
                 <ul className='link'>
                   <li>
-                    <a href="https://aromad17.github.io/kkotalk/" title="메신저앱 사이트로 이동" target='_blank'>
+                    <a href="https://kkotalk.sanghyeonzzang.com/" title="메신저앱 사이트로 이동" target='_blank'>
                       <FaChrome />
                     </a>
                   </li>
@@ -479,7 +479,7 @@ function Work() {
                 </div>
                 <ul className='link'>
                   <li>
-                    <a href="https://aromad17.github.io/netflix/" title="netflix 클론 사이트로 이동" target='_blank'>
+                    <a href="https://netflix.sanghyeonzzang.com/" title="netflix 클론 사이트로 이동" target='_blank'>
                       <FaChrome />
                     </a>
                   </li>
