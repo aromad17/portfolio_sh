@@ -208,7 +208,7 @@ function Work() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/aromad17/cjone_clone" title='cjone 클론사이트 깃헙 리파지토리로 이동 ' target='_blank'>
+                    <a href="https://github.com/aromad17/cjone_clone" title='cjone 클론사이트 깃헙 리파지토리로 이동' target='_blank'>
                       <FaGithub />
                     </a>
                   </li>
