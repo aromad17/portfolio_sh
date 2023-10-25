@@ -148,14 +148,14 @@ function Work() {
                   <div className='pc_mockup'>
                     <div className='pc_screen'>
                       <video src={process.env.PUBLIC_URL + '/images/cjone_vid.webm'}
-                        title="cjone video" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                        title="cjone video" muted autoPlay loop playsInline type="video/webm" >
                       </video>
                     </div>
                   </div>
                   <div className='tablet_mockup'>
                     <div className='tablet_screen'>
                       <video src={process.env.PUBLIC_URL + '/images/cjone_vid_tablet.mp4'}
-                        title="cjone video tablet" autoPlay={true} muted={true} loop={true} type="video/mp4" >
+                        title="cjone video tablet" muted autoPlay loop playsInline type="video/mp4" >
                       </video>
                     </div>
                   </div>
@@ -163,7 +163,7 @@ function Work() {
                     <div className='phone_screen'>
                       <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                       <video src={process.env.PUBLIC_URL + '/images/cjone_vid_mo.webm'}
-                        title="cjone video mo" muted={true} autoPlay={true} loop={true} type="video/webm" >
+                        title="cjone video mo" muted autoPlay loop playsInline type="video/webm" >
                       </video>
                     </div>
                   </div>
@@ -223,7 +223,7 @@ function Work() {
                   <div className='pc_mockup'>
                     <div className='pc_screen'>
                       <video src={process.env.PUBLIC_URL + '/images/sselectric.webm'}
-                        title="삼성전기" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                        title="삼성전기" muted autoPlay loop playsInline type="video/webm" >
                       </video>
                     </div>
                   </div>
@@ -283,14 +283,14 @@ function Work() {
                   <div className='pc_mockup'>
                     <div className='pc_screen'>
                       <video src={process.env.PUBLIC_URL + '/images/ssengineering.webm'}
-                        title="samsung engineering video" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                        title="samsung engineering video" muted autoPlay loop playsInline type="video/webm" >
                       </video>
                     </div>
                   </div>
                   <div className='tablet_mockup'>
                     <div className='tablet_screen'>
                       <video src={process.env.PUBLIC_URL + '/images/ssengineering_tablet.webm'}
-                        title="samsung engineering video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                        title="samsung engineering video tablet" muted autoPlay loop playsInline type="video/webm" >
                       </video>
                     </div>
                   </div>
@@ -298,7 +298,7 @@ function Work() {
                     <div className='phone_screen'>
                       <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                       <video src={process.env.PUBLIC_URL + '/images/ssengineering_mo.webm'}
-                        title="samsung engineering video mo" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                        title="samsung engineering video mo" muted autoPlay loop playsInline type="video/webm" >
                       </video>
                     </div>
                   </div>
@@ -362,7 +362,7 @@ function Work() {
                       <div className='tablet_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/tablet_m.png'} alt="태블릿모바일" />
                         <video src={process.env.PUBLIC_URL + '/images/kakao_tablet.webm'}
-                          title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                          title="netflix video tablet" muted autoPlay loop playsInline type="video/webm" >
                         </video>
                       </div>
                     </div>
@@ -371,7 +371,7 @@ function Work() {
                       <div className='phone_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                         <video src={process.env.PUBLIC_URL + '/images/kakao_mo.webm'}
-                          title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                          title="netflix video tablet" muted autoPlay loop playsInline type="video/webm" >
                         </video>
                       </div>
                     </div>
@@ -433,7 +433,7 @@ function Work() {
                       <div className='tablet_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/tablet_m.png'} alt="태블릿모바일" />
                         <video src={process.env.PUBLIC_URL + '/images/netflix_tablet.webm'}
-                          title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                          title="netflix video tablet" muted autoPlay loop playsInline type="video/webm" >
                         </video>
                       </div>
                     </div>
@@ -441,7 +441,7 @@ function Work() {
                       <div className='phone_screen'>
                         <img src={process.env.PUBLIC_URL + '/images/phone.png'} alt="phone" />
                         <video src={process.env.PUBLIC_URL + '/images/netflix_mo.webm'}
-                          title="netflix video tablet" autoPlay={true} muted={true} loop={true} type="video/webm" >
+                          title="netflix video tablet" muted autoPlay loop playsInline type="video/webm" >
                         </video>
                       </div>
                     </div>
